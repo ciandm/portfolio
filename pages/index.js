@@ -1,3 +1,5 @@
+import GetInTouchBanner from '../src/components/shared/GetInTouchBanner';
+
 export default function Home() {
-  return <h1>Hello</h1>;
+  return <GetInTouchBanner />;
 }

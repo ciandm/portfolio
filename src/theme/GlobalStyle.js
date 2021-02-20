@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Inter", sans-serif;
     font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   #__next {

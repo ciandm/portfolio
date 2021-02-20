@@ -20,10 +20,13 @@ export const FooterWrapper = styled.div`
   text-align: center;
 `;
 
-export const Icon = styled.button`
+export const Icon = styled.a`
+  align-items: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   height: 4.8rem;
   margin-bottom: 0.6rem;
   outline: none;

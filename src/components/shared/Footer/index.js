@@ -8,11 +8,11 @@ const Footer = () => {
   return (
     <S.Footer>
       <S.FooterWrapper>
-        <S.Icon>
-          <Link href="/">
+        <Link href="/" passHref>
+          <S.Icon>
             <SiGithub />
-          </Link>
-        </S.Icon>
+          </S.Icon>
+        </Link>
         <Paragraph color="white">
           Designed and built by myself, <strong>Cian Dolphin</strong>, with
           Figma & React.

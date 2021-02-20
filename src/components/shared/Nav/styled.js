@@ -5,6 +5,7 @@ export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary.white};
   padding: 1.2rem 1.6rem;
   position: relative;
+  z-index: 500;
 `;
 
 export const NavWrapper = styled.div`
@@ -101,6 +102,10 @@ export const NavItem = styled.li`
     display: block;
     padding: 1.6rem 0;
     width: 100%;
+  }
+
+  &:hover a {
+    color: ${({ theme }) => theme.colors.primary.blackPearl};
   }
 
   & ${NavIcon} svg {
