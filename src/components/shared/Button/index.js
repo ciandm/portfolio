@@ -6,7 +6,7 @@ import ButtonSecondary from './variations/ButtonSecondary';
 const Button = ({ variation, children, as, href, ...restProps }) => {
   if (variation === 'secondary') {
     return (
-      <ButtonSecondary href={href} {...restProps}>
+      <ButtonSecondary href={href} as={as} {...restProps}>
         {children}
       </ButtonSecondary>
     );

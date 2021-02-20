@@ -34,8 +34,6 @@ export const ButtonPrimary = styled(Button)`
 
 export const ButtonSecondary = styled(Button)`
   align-items: center;
-  background-color: ${({ ghost, theme }) =>
-    ghost ? 'transparent' : theme.colors.primary.white};
   border: none;
   border-radius: 0.6rem;
   display: flex;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as S from './styled';
 import Paragraph from '../Typography/Paragraph';
 import Button from '../Button';
@@ -16,7 +17,13 @@ function GetInTouchBanner({ background }) {
             <Button variation="primary" as="a" href="/contact">
               Get in touch
             </Button>
-            <Button variation="secondary" as="a" href="/portfolio" ghost>
+            <Button
+              variation="secondary"
+              as="a"
+              href="/portfolio"
+              // Swap light blue background on hover for white if background is set to blue
+              ghost
+            >
               View my work
             </Button>
           </S.Buttons>
@@ -27,3 +34,7 @@ function GetInTouchBanner({ background }) {
 }
 
 export default GetInTouchBanner;
+
+GetInTouchBanner.propTypes = {
+  background: PropTypes.oneOf(['white', 'blue']).isRequired,
+};

@@ -32,7 +32,7 @@ export const Section = styled.section`
     background: ${({ background }) =>
       background === 'white'
         ? 'linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(0, 0%, 100%) 100%)'
-        : 'linear-gradient(0deg, hsla(212, 57%, 91%, 0) 0%, hsl(212, 57%, 91%) 100%)'};
+        : 'linear-gradient(0deg, hsla(212, 57%, 98%, 0) 0%, hsl(212, 57%, 98%) 100%)'};
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {

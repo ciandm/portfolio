@@ -8,7 +8,7 @@ const theme = {
     secondary: {
       blueBayoux: 'hsl(212, 24%, 42%)',
       frenchPass: 'hsl(212, 100%, 88%)',
-      linkWater: 'hsl(212, 57%, 91%)',
+      linkWater: 'hsl(212, 57%, 98%)',
       periwinkle: 'hsl(213, 46%, 89%)',
       pigeonPost: 'hsl(212, 48%, 77%)',
     },
