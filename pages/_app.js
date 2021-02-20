@@ -1,7 +1,25 @@
-import '../styles/globals.css'
+import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import GlobalStyle from '../src/theme/GlobalStyle';
+import theme from '../src/theme/theme';
+import PageTemplate from '../src/components/shared/PageTemplate';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <PageTemplate>
+          <Component {...pageProps} />
+        </PageTemplate>
+      </ThemeProvider>
+    </>
+  );
 }
-
-export default MyApp
