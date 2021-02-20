@@ -35,6 +35,7 @@ function Nav() {
             {open ? <MdClose /> : <MdMenu />}
           </S.Menu>
         ) : null}
+        {/* If it's open and on mobile, or it's not mobile, which will only be true when brower width is > 768 */}
         <S.NavItems open={(open && isMobile) || !isMobile}>
           <S.NavItem active={router.pathname === '/'}>
             {isMobile ? (

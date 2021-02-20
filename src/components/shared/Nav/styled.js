@@ -3,6 +3,8 @@ import { H3, SmallCaps } from '../../../theme/typography';
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary.white};
+  padding: 1.2rem 1.6rem;
+  position: relative;
 `;
 
 export const NavWrapper = styled.div`
@@ -11,12 +13,6 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.constants.maxWidth};
-  padding: 1.2rem 1.6rem;
-  position: relative;
-
-  @media ${({ theme }) => theme.mediaQueries.tablet} {
-    padding: 1.2rem 2.4rem;
-  }
 `;
 
 export const LogoContainer = styled.div`
@@ -70,6 +66,7 @@ export const NavItems = styled.ul`
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     flex-direction: row;
+    padding: 0;
     position: initial;
     width: auto;
   }

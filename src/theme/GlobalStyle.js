@@ -5,6 +5,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Inter", sans-serif;
     font-size: 62.5%;
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
   }
 
