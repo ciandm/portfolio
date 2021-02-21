@@ -6,7 +6,7 @@ import Heading from '../Typography/Heading';
 import Paragraph from '../Typography/Paragraph';
 import Button from '../Button';
 
-function GetInTouchBanner({ backgroundColor }) {
+function GetInTouchBanner({ backgroundColor, portfolioPageCurrent }) {
   return (
     <S.Section backgroundColor={backgroundColor}>
       <S.Wrapper>
@@ -22,15 +22,17 @@ function GetInTouchBanner({ backgroundColor }) {
             <Button variation="primary" as="a" href="/contact">
               Get in touch
             </Button>
-            <Button
-              variation="secondary"
-              as="a"
-              href="/portfolio"
-              // Swap light blue background on hover for white if background is set to blue
-              ghost
-            >
-              View my work
-            </Button>
+            {!portfolioPageCurrent && (
+              <Button
+                variation="secondary"
+                as="a"
+                href="/portfolio"
+                // Swap light blue background on hover for white if background is set to blue
+                ghost
+              >
+                View my work
+              </Button>
+            )}
           </S.Buttons>
         </S.Content>
       </S.Wrapper>
@@ -42,4 +44,5 @@ export default GetInTouchBanner;
 
 GetInTouchBanner.propTypes = {
   backgroundColor: PropTypes.oneOf(['white', 'linkWater']).isRequired,
+  portfolioPageCurrent: PropTypes.bool,
 };

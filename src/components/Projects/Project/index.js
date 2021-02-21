@@ -6,25 +6,23 @@ import Heading from '../../shared/Typography/Heading';
 import Paragraph from '../../shared/Typography/Paragraph';
 import Button from '../../shared/Button';
 
-function Project() {
+function Project({ strapline, heading, description, id, image, imageAlt }) {
   return (
     <S.Project>
       <S.ImageWrapper>
         <S.ImageContainer>
-          <ProjectImage />
+          <ProjectImage src={image} alt={imageAlt} />
         </S.ImageContainer>
       </S.ImageWrapper>
       <S.Content>
-        <Strapline>Branding</Strapline>
+        <Strapline>{strapline}</Strapline>
         <Heading color="white" type="h3" paddingBottom={0.4}>
-          Created a brand book for CurrencyFair
+          {heading}
         </Heading>
         <Paragraph color="white" paddingBottom={2.4}>
-          Developed an updated and in-depth brand book for CurrencyFair, to
-          improve consistency across the brand as we began to scale and enter
-          more countries.
+          {description}
         </Paragraph>
-        <Button variation="primary" as="a" href="/portfolio">
+        <Button variation="primary" as="a" href={`/portfolio/${id}`}>
           View project
         </Button>
       </S.Content>

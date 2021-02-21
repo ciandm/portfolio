@@ -1,33 +1,25 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  max-width: ${({ theme }) => theme.constants.maxWidth};
   padding: 0 1.6rem;
   position: relative;
-  width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 0 2.4rem;
-  }
-
-  @media ${({ theme }) => theme.mediaQueries.desktop} {
-    display: flex;
-    justify-content: center;
-    padding: 0;
   }
 `;
 
 export const Content = styled.div`
   display: grid;
   gap: 1.2rem;
-  grid-template-columns: 1fr;
   grid-auto-rows: min-content;
 
   &::before {
     background-image: url('/images/polka-texture.svg');
     background-repeat: repeat;
     content: '';
-    display: block;
+    display: ${({ backgroundPattern }) =>
+      backgroundPattern ? 'block' : 'none'};
     height: 20rem;
     opacity: 0.1;
     position: absolute;
@@ -50,26 +42,12 @@ export const Content = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
+    margin: 0 auto;
     width: 75%;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.desktop} {
-    flex-basis: 41.66667%;
-    width: 41.66667%;
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    flex-basis: 66.66667%;
+    width: 66.66667%;
   }
-`;
-
-export const Buttons = styled.div`
-  align-items: center;
-  display: flex;
-  padding-top: 2.4rem;
-`;
-
-export const ImageContainer = styled.div`
-  border-radius: 1.2rem;
-  height: 32rem;
-  position: relative;
-  margin-left: 4.8rem;
-  overflow: hidden;
-  width: 35rem;
 `;

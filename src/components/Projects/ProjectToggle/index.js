@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { MdBrush, MdCode } from 'react-icons/md';
 import * as S from './styled';
 
@@ -24,8 +23,3 @@ function ProjectToggle({ activeDisplay, updateDisplay }) {
 }
 
 export default ProjectToggle;
-
-ProjectToggle.propTypes = {
-  activeDisplay: PropTypes.oneOf(['design', 'coding']).isRequired,
-  updateDisplay: PropTypes.func.isRequired,
-};

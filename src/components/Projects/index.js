@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Section from '../shared/Section';
 import ProjectGrid from './ProjectGrid';
 import Project from './Project';
 import ProjectToggle from './ProjectToggle';
 
-function Projects({ backgroundColor, toggleDisplayed }) {
-  const [activeDisplay, setActiveDisplay] = useState('design');
-  const updateDisplay = choice => setActiveDisplay(choice);
-
+function Projects({
+  backgroundColor,
+  toggleDisplayed,
+  projects,
+  activeDisplay,
+  updateDisplay,
+}) {
   return (
     <Section
       backgroundColor={backgroundColor}
@@ -23,8 +26,9 @@ function Projects({ backgroundColor, toggleDisplayed }) {
         />
       ) : null}
       <ProjectGrid>
-        <Project />
-        <Project />
+        {projects.map(project => (
+          <Project key={project.id} {...project} />
+        ))}
       </ProjectGrid>
     </Section>
   );
@@ -33,6 +37,9 @@ function Projects({ backgroundColor, toggleDisplayed }) {
 export default Projects;
 
 Projects.propTypes = {
+  activeDisplay: PropTypes.oneOf(['design', 'coding']),
   backgroundColor: PropTypes.oneOf(['blackPearl', 'white', 'linkWater']),
+  projects: PropTypes.instanceOf(Array).isRequired,
   toggleDisplayed: PropTypes.bool.isRequired,
+  updateDisplay: PropTypes.func,
 };
