@@ -5,6 +5,7 @@ export const Button = styled.button`
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
+  justify-self: flex-start;
   line-height: 1.75;
   outline: none;
 

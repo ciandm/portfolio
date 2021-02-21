@@ -6,9 +6,9 @@ import Heading from '../Typography/Heading';
 import Paragraph from '../Typography/Paragraph';
 import Button from '../Button';
 
-function GetInTouchBanner({ background }) {
+function GetInTouchBanner({ backgroundColor }) {
   return (
-    <S.Section background={background}>
+    <S.Section backgroundColor={backgroundColor}>
       <S.Wrapper>
         <S.Content>
           <Heading type="h3" color="blackPearl">
@@ -41,5 +41,5 @@ function GetInTouchBanner({ background }) {
 export default GetInTouchBanner;
 
 GetInTouchBanner.propTypes = {
-  background: PropTypes.oneOf(['white', 'blue']).isRequired,
+  backgroundColor: PropTypes.oneOf(['white', 'linkWater']).isRequired,
 };

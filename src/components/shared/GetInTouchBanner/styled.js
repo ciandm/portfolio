@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: ${({ background, theme }) =>
-    background === 'white'
+  background-color: ${({ backgroundColor, theme }) =>
+    backgroundColor === 'white'
       ? theme.colors.primary.white
       : theme.colors.secondary.linkWater};
   display: flex;
@@ -29,8 +29,8 @@ export const Section = styled.section`
   }
 
   &::after {
-    background: ${({ background }) =>
-      background === 'white'
+    background: ${({ backgroundColor }) =>
+      backgroundColor === 'white'
         ? 'linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(0, 0%, 100%) 100%)'
         : 'linear-gradient(0deg, hsla(212, 57%, 98%, 0) 0%, hsl(212, 57%, 98%) 100%)'};
   }
