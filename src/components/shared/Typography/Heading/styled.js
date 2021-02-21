@@ -3,8 +3,9 @@ import { H1, H2, H3, H4, H5 } from '../../../../theme/typography';
 
 const baseHeading = css`
   color: ${({ color, theme }) => theme.colors.primary[color]};
-  padding-bottom: ${({ paddingBottom }) => `${paddingBottom}rem`};
-  padding-top: ${({ paddingTop }) => `${paddingTop}rem`};
+  padding-bottom: ${({ paddingBottom }) =>
+    paddingBottom ? `${paddingBottom}rem` : null};
+  padding-top: ${({ paddingTop }) => (paddingTop ? `${paddingTop}rem` : null)};
 `;
 
 export const HeadingOne = styled.h1`

@@ -10,6 +10,7 @@ export const Section = styled.section`
       : theme.colors.secondary.linkWater};
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: ${({ paddingS }) => `${paddingS}rem 0`};
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {

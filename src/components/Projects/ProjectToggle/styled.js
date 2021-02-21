@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ToggleContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary.periwinkle};
   border-radius: 1.2rem;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.03);
   display: grid;
   grid-template-columns: 15rem 15rem;
   margin-bottom: 6rem;

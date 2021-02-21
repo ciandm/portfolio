@@ -6,7 +6,7 @@ import GetInTouchBanner from '../../src/components/shared/GetInTouchBanner';
 function Portfolio() {
   return (
     <>
-      <Projects backgroundColor="linkWater" toggle />
+      <Projects backgroundColor="linkWater" toggleDisplayed />
       <GetInTouchBanner backgroundColor="white" />
     </>
   );

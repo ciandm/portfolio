@@ -13,9 +13,12 @@ const theme = {
       pigeonPost: 'hsl(212, 48%, 77%)',
     },
     tertiary: {
+      cherub: 'hsl(331, 72%, 92%)',
+      cinderella: 'hsl(18, 92%, 90%)',
       eucalyptus: 'hsl(140, 59%, 43%)',
       fringyFlower: 'hsl(140, 46%, 85%)',
       parsley: 'hsl(140, 61%, 20%)',
+      selago: 'hsl(251, 81%, 92%)',
     },
   },
   constants: {

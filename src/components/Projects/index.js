@@ -5,7 +5,7 @@ import ProjectGrid from './ProjectGrid';
 import Project from './Project';
 import ProjectToggle from './ProjectToggle';
 
-function Projects({ backgroundColor, projects, toggle }) {
+function Projects({ backgroundColor, toggleDisplayed }) {
   const [activeDisplay, setActiveDisplay] = useState('design');
   const updateDisplay = choice => setActiveDisplay(choice);
 
@@ -16,7 +16,7 @@ function Projects({ backgroundColor, projects, toggle }) {
       paddingM={8.4}
       paddingL={9.6}
     >
-      {toggle ? (
+      {toggleDisplayed ? (
         <ProjectToggle
           activeDisplay={activeDisplay}
           updateDisplay={updateDisplay}
@@ -32,8 +32,7 @@ function Projects({ backgroundColor, projects, toggle }) {
 
 export default Projects;
 
-Section.propTypes = {
+Projects.propTypes = {
   backgroundColor: PropTypes.oneOf(['blackPearl', 'white', 'linkWater']),
-  children: PropTypes.node.isRequired,
-  toggle: PropTypes.bool.isRequired,
+  toggleDisplayed: PropTypes.bool.isRequired,
 };
