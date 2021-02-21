@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as S from './styled';
+// Components
+import Heading from '../Typography/Heading';
 import Paragraph from '../Typography/Paragraph';
 import Button from '../Button';
 
@@ -9,6 +11,9 @@ function GetInTouchBanner({ background }) {
     <S.Section background={background}>
       <S.Wrapper>
         <S.Content>
+          <Heading type="h3" color="blackPearl">
+            Want to have a chat?
+          </Heading>
           <Paragraph color="blueBayoux">
             Leave me a message and I’ll promise to get back to you as soon as
             possible - even if it’s just to say hello!

@@ -7,6 +7,8 @@ export const Paragraph = styled.p`
     color === 'blueBayoux'
       ? theme.colors.secondary.blueBayoux
       : theme.colors.primary.white};
+  padding-bottom: ${({ paddingBottom }) => `${paddingBottom}rem`};
+  padding-top: ${({ paddingTop }) => `${paddingTop}rem`};
 
   & strong {
     font-weight: 700;
