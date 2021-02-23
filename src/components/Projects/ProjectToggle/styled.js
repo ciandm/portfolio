@@ -18,7 +18,7 @@ export const Slide = styled.div`
   left: 0;
   position: absolute;
   transform: ${({ active }) =>
-    active === 'design' ? 'translateX(0)' : 'translateX(100%)'};
+    active === 'Design' ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.25s ease-in-out;
   width: 50%;
 `;

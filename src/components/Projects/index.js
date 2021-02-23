@@ -27,7 +27,7 @@ function Projects({
       ) : null}
       <ProjectGrid>
         {projects.map(project => (
-          <Project key={project.id} {...project} />
+          <Project key={project.slug} slug={project.slug} {...project.data} />
         ))}
       </ProjectGrid>
     </Section>
@@ -37,7 +37,7 @@ function Projects({
 export default Projects;
 
 Projects.propTypes = {
-  activeDisplay: PropTypes.oneOf(['design', 'coding']),
+  activeDisplay: PropTypes.oneOf(['Design', 'Coding']),
   backgroundColor: PropTypes.oneOf(['blackPearl', 'white', 'linkWater']),
   projects: PropTypes.instanceOf(Array).isRequired,
   toggleDisplayed: PropTypes.bool.isRequired,

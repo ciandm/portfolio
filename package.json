@@ -8,12 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "next": "10.0.7",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
-    "styled-components": "^5.2.1"
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "remark-react": "^8.0.0",
+    "styled-components": "^5.2.1",
+    "unified": "^9.2.0"
   },
   "devDependencies": {
     "@ijsto/eslint-config": "^3.0.1",

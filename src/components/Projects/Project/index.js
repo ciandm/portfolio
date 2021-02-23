@@ -6,7 +6,7 @@ import Heading from '../../shared/Typography/Heading';
 import Paragraph from '../../shared/Typography/Paragraph';
 import Button from '../../shared/Button';
 
-function Project({ strapline, heading, description, id, image, imageAlt }) {
+function Project({ slug, strapline, title, description, image, imageAlt }) {
   return (
     <S.Project>
       <S.ImageWrapper>
@@ -17,12 +17,12 @@ function Project({ strapline, heading, description, id, image, imageAlt }) {
       <S.Content>
         <Strapline>{strapline}</Strapline>
         <Heading color="white" type="h3" paddingBottom={0.4}>
-          {heading}
+          {title}
         </Heading>
         <Paragraph color="white" paddingBottom={2.4}>
           {description}
         </Paragraph>
-        <Button variation="primary" as="a" href={`/portfolio/${id}`}>
+        <Button variation="primary" as="a" href={`/portfolio/${slug}`}>
           View project
         </Button>
       </S.Content>

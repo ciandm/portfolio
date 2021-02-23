@@ -1,16 +1,23 @@
 import Head from 'next/head';
+import { getProjectsBySlug } from '../data/markdown';
 import HomeHero from '../src/components/HomeHero';
 import Projects from '../src/components/Projects';
 import GetInTouchBanner from '../src/components/shared/GetInTouchBanner';
 import Skills from '../src/components/Skills';
-import portfolioProjects from '../src/data/portfolioProjects';
 
-export default function Home() {
-  const { design, coding } = portfolioProjects;
-  const homeProjects = design
-    .concat(coding)
-    .filter(p => p.id === 'coding-1' || p.id === 'design-1');
+export async function getStaticProps() {
+  const projects = await getProjectsBySlug([
+    'brand-book',
+    'responsive-designo-website',
+  ]);
+  return {
+    props: {
+      projects: await Promise.all(projects),
+    },
+  };
+}
 
+export default function Home({ projects }) {
   return (
     <>
       <Head>
@@ -21,7 +28,7 @@ export default function Home() {
       <Projects
         backgroundColor="white"
         toggleDisplayed={false}
-        projects={homeProjects}
+        projects={projects}
       />
       <GetInTouchBanner backgroundColor="linkWater" />
     </>

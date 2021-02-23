@@ -6,12 +6,20 @@ import GetInTouchBanner from '../../src/components/shared/GetInTouchBanner';
 import HeroSection from '../../src/components/shared/HeroSection';
 import Heading from '../../src/components/shared/Typography/Heading';
 import Paragraph from '../../src/components/shared/Typography/Paragraph';
-import portfolioProjects from '../../src/data/portfolioProjects';
+import { getAllPortfolioProjects } from '../../data/markdown';
 
-function Portfolio() {
-  const [activeDisplay, setActiveDisplay] = useState('design');
+export async function getStaticProps() {
+  const projects = await getAllPortfolioProjects();
+  return {
+    props: {
+      projects: await Promise.all(projects),
+    },
+  };
+}
+
+function Portfolio({ projects }) {
+  const [activeDisplay, setActiveDisplay] = useState('Design');
   const updateDisplay = choice => setActiveDisplay(choice);
-
   return (
     <>
       <Head>
@@ -35,7 +43,7 @@ function Portfolio() {
         toggleDisplayed
         updateDisplay={updateDisplay}
         activeDisplay={activeDisplay}
-        projects={portfolioProjects[activeDisplay]}
+        projects={projects.filter(p => p.data.category === activeDisplay)}
       />
       <GetInTouchBanner backgroundColor="white" portfolioPageCurrent />
     </>

@@ -5,30 +5,30 @@ import * as S from './styled';
 const Heading = ({ type, color, children, ...restProps }) => {
   if (type === 'h5')
     return (
-      <S.HeadingFive color={color} {...restProps}>
+      <S.HeadingFive headingColor={color} {...restProps}>
         {children}
       </S.HeadingFive>
     );
   if (type === 'h4')
     return (
-      <S.HeadingFour color={color} {...restProps}>
+      <S.HeadingFour headingColor={color} {...restProps}>
         {children}
       </S.HeadingFour>
     );
   if (type === 'h3')
     return (
-      <S.HeadingThree color={color} {...restProps}>
+      <S.HeadingThree headingColor={color} {...restProps}>
         {children}
       </S.HeadingThree>
     );
   if (type === 'h2')
     return (
-      <S.HeadingTwo color={color} {...restProps}>
+      <S.HeadingTwo headingColor={color} {...restProps}>
         {children}
       </S.HeadingTwo>
     );
   return (
-    <S.HeadingOne color={color} {...restProps}>
+    <S.HeadingOne headingColor={color} {...restProps}>
       {children}
     </S.HeadingOne>
   );

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { H1, H2, H3, H4, H5 } from '../../../../theme/typography';
 
 const baseHeading = css`
-  color: ${({ color, theme }) => theme.colors.primary[color]};
+  color: ${({ headingColor, theme }) => theme.colors.primary[headingColor]};
   padding-bottom: ${({ paddingBottom }) =>
     paddingBottom ? `${paddingBottom}rem` : null};
   padding-top: ${({ paddingTop }) => (paddingTop ? `${paddingTop}rem` : null)};

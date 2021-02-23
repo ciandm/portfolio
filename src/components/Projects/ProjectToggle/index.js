@@ -6,14 +6,14 @@ function ProjectToggle({ activeDisplay, updateDisplay }) {
   return (
     <S.ToggleContainer>
       <S.Toggle
-        active={activeDisplay === 'design'}
-        onClick={() => updateDisplay('design')}
+        active={activeDisplay === 'Design'}
+        onClick={() => updateDisplay('Design')}
       >
         Design <MdBrush />
       </S.Toggle>
       <S.Toggle
-        active={activeDisplay === 'coding'}
-        onClick={() => updateDisplay('coding')}
+        active={activeDisplay === 'Coding'}
+        onClick={() => updateDisplay('Coding')}
       >
         Coding <MdCode />
       </S.Toggle>

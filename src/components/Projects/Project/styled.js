@@ -84,6 +84,7 @@ export const Content = styled.div`
   gap: 1.2rem;
   grid-template-rows: repeat(4, min-content);
   padding: 3.2rem 1.6rem 4.8rem;
+  width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     border-radius: 0 0 1.2rem 1.2rem;
