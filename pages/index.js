@@ -6,13 +6,13 @@ import GetInTouchBanner from '../src/components/shared/GetInTouchBanner';
 import Skills from '../src/components/Skills';
 
 export async function getStaticProps() {
-  const projects = await getProjectsBySlug([
+  const projects = getProjectsBySlug([
     'brand-book',
     'responsive-designo-website',
   ]);
   return {
     props: {
-      projects: await Promise.all(projects),
+      projects,
     },
   };
 }

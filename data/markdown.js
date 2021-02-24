@@ -1,19 +1,21 @@
-import { promises as fs } from 'fs';
+import fs from 'fs';
 import path, { join } from 'path';
 import matter from 'gray-matter';
 
 const projectsDirectory = path.join(process.cwd(), '/projects');
 
-export async function getSlugsFromDirectory(dir) {
-  return fs.readdir(dir);
+// gets all files from the directory specified
+export function getSlugsFromDirectory(dir) {
+  return fs.readdirSync(dir);
 }
 
-export async function getAllPortfolioProjects() {
-  const fileNames = await getSlugsFromDirectory(projectsDirectory);
+// returns meta data and slugs of all of the portfolio projects, to be used on the portfolio page to display all of the projects. These will be filtered out into design/coding within the page itself.
+export function getAllPortfolioProjects() {
+  const fileNames = getSlugsFromDirectory(projectsDirectory);
 
-  return fileNames.map(async filename => {
+  return fileNames.map(filename => {
     const filePath = path.join(projectsDirectory, filename);
-    const fileContents = await fs.readFile(filePath, 'utf8');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
     return {
       data,
@@ -22,10 +24,11 @@ export async function getAllPortfolioProjects() {
   });
 }
 
-export async function getContentsBySlug(slug) {
+// returns the content of the page, as well as the meta data.
+export function getContentsBySlug(slug) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(projectsDirectory, `/${realSlug}.md`);
-  const fileContents = await fs.readFile(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
   return {
@@ -34,18 +37,10 @@ export async function getContentsBySlug(slug) {
   };
 }
 
-export async function getAllProjectPageSlugs() {
-  const pages = await getSlugsFromDirectory(projectsDirectory);
-  return pages.map(page => page.replace(/\.md$/, ''));
-}
-
-export function getPageContentsBySlug(slug) {
-  return getContentsBySlug(projectsDirectory, slug);
-}
-
-export async function getProjectsBySlug(slugs = []) {
-  return slugs.map(async slug => {
-    const { data } = await getContentsBySlug(slug);
+// returns a selected amount of projects and its meta data, given by an array.
+export function getProjectsBySlug(slugs = []) {
+  return slugs.map(slug => {
+    const { data } = getContentsBySlug(slug);
     return {
       data,
       slug,

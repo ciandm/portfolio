@@ -8,11 +8,11 @@ import Heading from '../../src/components/shared/Typography/Heading';
 import Paragraph from '../../src/components/shared/Typography/Paragraph';
 import { getAllPortfolioProjects } from '../../data/markdown';
 
-export async function getStaticProps() {
-  const projects = await getAllPortfolioProjects();
+export function getStaticProps() {
+  const projects = getAllPortfolioProjects();
   return {
     props: {
-      projects: await Promise.all(projects),
+      projects,
     },
   };
 }

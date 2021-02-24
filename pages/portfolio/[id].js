@@ -2,13 +2,16 @@ import React from 'react';
 import HeroSection from '../../src/components/shared/HeroSection';
 import Heading from '../../src/components/shared/Typography/Heading';
 import PrintMarkdown from '../../src/components/markdown/printMarkdown';
-import { getAllProjectPageSlugs, getContentsBySlug } from '../../data/markdown';
+import {
+  getAllPortfolioProjects,
+  getContentsBySlug,
+} from '../../data/markdown';
 
 export async function getStaticPaths() {
-  const posts = await getAllProjectPageSlugs();
-  const paths = posts.map(post => ({
+  const posts = getAllPortfolioProjects();
+  const paths = posts.map(({ slug }) => ({
     params: {
-      id: post,
+      id: slug,
     },
   }));
   return {
@@ -18,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const projectData = await getContentsBySlug(params.id);
+  const projectData = getContentsBySlug(params.id);
   return {
     props: {
       projectData,
