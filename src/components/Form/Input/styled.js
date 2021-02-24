@@ -22,7 +22,9 @@ export const Label = styled.label`
 
 export const InputContainer = styled.div`
   display: flex;
+  position: relative;
 `;
+
 export const Input = styled.input`
   ${Body};
   appearance: ${({ as }) => (as === 'textarea' ? 'none' : null)};
@@ -47,5 +49,19 @@ export const Input = styled.input`
 
   &:invalid {
     border-color: ${({ theme }) => theme.colors.secondary.redViolet};
+  }
+`;
+
+export const Error = styled.div`
+  height: 2.4rem;
+  width: 2.4rem;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.4rem;
+  transform-origin: top;
+
+  & svg {
+    height: 100%;
+    width: 100%;
   }
 `;

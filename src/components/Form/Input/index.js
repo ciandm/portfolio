@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MdError } from 'react-icons/md';
 import * as S from './styled';
+import ErrorIcon from '../Icons/ErrorIcon';
 
 const Input = ({ label, name, placeholder, type, value, as }) => {
   return (
@@ -16,7 +16,9 @@ const Input = ({ label, name, placeholder, type, value, as }) => {
           type={type}
           value={value}
         />
-        <MdError />
+        <S.Error>
+          <ErrorIcon />
+        </S.Error>
       </S.InputContainer>
     </S.Wrapper>
   );
