@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as S from './styled';
-import ErrorIcon from '../Icons/ErrorIcon';
+import ErrorIcon from '../ErrorIcon';
 
-const Input = ({ label, name, placeholder, type, value, as }) => {
+const Input = ({
+  label,
+  name,
+  placeholder,
+  type,
+  value,
+  as,
+  handleInputChange,
+}) => {
   return (
     <S.Wrapper>
       <S.Label htmlFor={name}>{label}</S.Label>
@@ -12,6 +20,7 @@ const Input = ({ label, name, placeholder, type, value, as }) => {
           as={as}
           id={name}
           name={name}
+          onChange={e => handleInputChange(e)}
           placeholder={placeholder}
           type={type}
           value={value}

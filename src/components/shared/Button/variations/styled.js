@@ -15,14 +15,15 @@ export const Button = styled.button`
 `;
 
 export const ButtonPrimary = styled(Button)`
+  align-self: ${({ alignSelf }) => alignSelf || null};
   background-color: ${({ theme }) => theme.colors.primary.denim};
   border: 1px solid transparent;
   border-radius: 1.2rem;
   color: ${({ theme }) => theme.colors.primary.white};
   padding: 1.2rem 2.4rem;
 
-  &:hover,
-  &:focus {
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
     background-color: transparent;
     border-color: ${({ theme }) => theme.colors.primary.denim};
     color: ${({ theme }) => theme.colors.primary.denim};
