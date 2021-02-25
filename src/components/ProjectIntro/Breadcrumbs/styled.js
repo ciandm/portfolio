@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { SmallCaps } from '../../theme/typography';
+import { SmallCaps } from '../../../theme/typography';
 
 export const Breadcrumbs = styled.div`
   align-items: center;
   display: flex;
-  padding-bottom: 1.2rem;
 `;
 
 export const Crumb = styled.span`

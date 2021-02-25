@@ -1,48 +1,53 @@
 import styled from 'styled-components';
 import { H2, H3, H4, H5, Body } from '../../theme/typography';
 
-export const Markdown = styled.div`
+export const Section = styled.section`
+  display: flex;
+  justify-content: center;
+  padding: 0 1.6rem 7.2rem;
 
-  padding: 0 1.6rem;
-  width: 100%;
-
-  & h2,
-  & h3,
-  & h4,
-  & h5 {
-    color: ${({ theme }) => theme.colors.primary.blackPearl};
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    padding: 0 2.4rem 8.4rem;
   }
 
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    padding: 0;
+  }
+`;
+
+export const Wrapper = styled.div`
+  max-width: ${({ theme }) => theme.constants.maxWidth};
+  width: 100%;
+`;
+
+export const Markdown = styled.div`
+  width: 100%;
+
   & h2 {
-    ${H2}
     padding-bottom: 2.4rem;
   }
 
   & h3 {
-    ${H3}
   }
 
   & h4 {
-    ${H4}
-    padding-bottom: .4rem;
+    padding-bottom: 0.4rem;
   }
 
   & h5 {
-    ${H5};
   }
 
-  & p {
-    ${Body}
-    color: ${({ theme }) => theme.colors.secondaryblueBayoux};
+  & hr {
+    border-top: 1px solid ${({ theme }) => theme.colors.secondary.periwinkle};
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
-    padding: 0 2.4rem;
+    margin: 0 auto;
+    width: 75%;
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
-    padding: 0;
   }
 `;

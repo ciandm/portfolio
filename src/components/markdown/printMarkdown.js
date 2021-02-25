@@ -7,6 +7,7 @@ import * as S from './styled';
 import Paragraph from '../shared/Typography/Paragraph';
 
 function PrintMarkdown({ markdown }) {
+  // Defining which components should be used when printing out markdown
   const MarkdownComponents = {
     H1: ({ children }) => (
       <Heading type="h2" color="blackPearl">
@@ -41,7 +42,13 @@ function PrintMarkdown({ markdown }) {
     })
     .processSync(markdown).result;
 
-  return <S.Markdown>{content}</S.Markdown>;
+  return (
+    <S.Section>
+      <S.Wrapper>
+        <S.Markdown>{content}</S.Markdown>
+      </S.Wrapper>
+    </S.Section>
+  );
 }
 
 export default PrintMarkdown;

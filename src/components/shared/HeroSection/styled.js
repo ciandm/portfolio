@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  max-width: ${({ theme }) => theme.constants.maxWidth};
   padding: 0 1.6rem;
   position: relative;
+  width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 0 2.4rem;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    padding: 0;
   }
 `;
 
@@ -46,7 +52,7 @@ export const Content = styled.div`
     width: 75%;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.tablet} {
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-basis: 66.66667%;
     width: 66.66667%;
   }

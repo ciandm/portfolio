@@ -1,12 +1,10 @@
 import React from 'react';
-import HeroSection from '../../src/components/shared/HeroSection';
-import Heading from '../../src/components/shared/Typography/Heading';
 import PrintMarkdown from '../../src/components/markdown/printMarkdown';
+import ProjectIntro from '../../src/components/ProjectIntro';
 import {
   getAllPortfolioProjects,
   getContentsBySlug,
 } from '../../data/markdown';
-import Breadcrumbs from '../../src/components/Breadcrumbs';
 
 export async function getStaticPaths() {
   const posts = getAllPortfolioProjects();
@@ -33,12 +31,7 @@ export async function getStaticProps({ params }) {
 export default function PortfolioShowcase({ projectData }) {
   return (
     <>
-      <HeroSection>
-        <Breadcrumbs category={projectData.data.category} />
-        <Heading color="blackPearl" type="h1">
-          {projectData.data.title}
-        </Heading>
-      </HeroSection>
+      <ProjectIntro {...projectData} />
       <PrintMarkdown markdown={projectData.content} />
     </>
   );
