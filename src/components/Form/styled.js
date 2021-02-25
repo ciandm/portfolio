@@ -13,19 +13,30 @@ export const Wrapper = styled.div`
     display: block;
     height: 20rem;
     opacity: 0.1;
-    right: 0;
+    right: -10rem;
     position: absolute;
     transform-origin: center;
+    transform: rotate(15deg);
     width: 20rem;
     z-index: -1;
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 0;
+
+    &::before {
+      height: 30rem;
+      top: 2rem;
+      width: 30rem;
+    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     padding: 0;
+
+    &::before {
+      right: 14rem;
+    }
   }
 `;
 
