@@ -29,7 +29,11 @@ export const Input = styled.input`
   ${Body};
   appearance: ${({ as }) => (as === 'textarea' ? 'none' : null)};
   border-radius: 1.2rem;
-  border: 1px solid ${({ theme }) => theme.colors.secondary.periwinkle};
+  border: 1px solid
+    ${({ theme, error }) =>
+      error
+        ? theme.colors.tertiary.redViolet
+        : theme.colors.secondary.periwinkle};
   font-family: inherit;
   color: ${({ theme }) => theme.colors.primary.blackPearl};
   outline: none;
@@ -44,7 +48,8 @@ export const Input = styled.input`
 
   &:hover,
   &:focus {
-    border-color: ${({ theme }) => theme.colors.primary.denim};
+    border-color: ${({ theme, error }) =>
+      error ? theme.colors.tertiary.redViolet : theme.colors.primary.denim};
   }
 
   &:invalid {

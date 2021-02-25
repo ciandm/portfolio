@@ -4,6 +4,7 @@ import * as S from './styled';
 import ErrorIcon from '../ErrorIcon';
 
 const Input = ({
+  error,
   label,
   name,
   placeholder,
@@ -18,6 +19,7 @@ const Input = ({
       <S.InputContainer>
         <S.Input
           as={as}
+          error={error}
           id={name}
           name={name}
           onChange={e => handleInputChange(e)}
@@ -25,9 +27,11 @@ const Input = ({
           type={type}
           value={value}
         />
-        <S.Error>
-          <ErrorIcon />
-        </S.Error>
+        {error && (
+          <S.Error>
+            <ErrorIcon />
+          </S.Error>
+        )}
       </S.InputContainer>
     </S.Wrapper>
   );

@@ -18,6 +18,7 @@ const theme = {
       eucalyptus: 'hsl(140, 59%, 43%)',
       fringyFlower: 'hsl(140, 46%, 85%)',
       parsley: 'hsl(140, 61%, 20%)',
+      redViolet: 'hsl(332, 80%, 45%)',
       selago: 'hsl(251, 81%, 92%)',
     },
   },
