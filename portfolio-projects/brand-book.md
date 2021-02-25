@@ -5,6 +5,7 @@ description: "Developed an updated and in-depth brand book for CurrencyFair, to 
 image: "/images/image-placeholder.jpg"
 imageAlt: "Placeholder"
 strapline: "Branding"
+tech: ["Illustrator", "InDesign", "Photoshop"]
 title: "Created a brand book for CurrencyFair"
 ---
 

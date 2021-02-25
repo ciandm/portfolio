@@ -2,7 +2,7 @@ import fs from 'fs';
 import path, { join } from 'path';
 import matter from 'gray-matter';
 
-const projectsDirectory = path.join(process.cwd(), '/projects');
+const projectsDirectory = path.join(process.cwd(), '/portfolio-projects');
 
 // gets all files from the directory specified
 export function getSlugsFromDirectory(dir) {

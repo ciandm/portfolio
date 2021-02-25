@@ -6,6 +6,7 @@ import {
   getAllPortfolioProjects,
   getContentsBySlug,
 } from '../../data/markdown';
+import Breadcrumbs from '../../src/components/Breadcrumbs';
 
 export async function getStaticPaths() {
   const posts = getAllPortfolioProjects();
@@ -33,6 +34,7 @@ export default function PortfolioShowcase({ projectData }) {
   return (
     <>
       <HeroSection>
+        <Breadcrumbs category={projectData.data.category} />
         <Heading color="blackPearl" type="h1">
           {projectData.data.title}
         </Heading>
