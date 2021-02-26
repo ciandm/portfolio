@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { H2, H3, H4, H5, Body } from '../../theme/typography';
 
 export const Section = styled.section`
   display: flex;

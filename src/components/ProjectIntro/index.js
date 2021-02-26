@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // Components
 import Breadcrumbs from './Breadcrumbs';
 import Heading from '../shared/Typography/Heading';
@@ -22,3 +23,16 @@ function ProjectIntro({ data, content }) {
 }
 
 export default ProjectIntro;
+
+ProjectIntro.propTypes = {
+  data: PropTypes.shape({
+    carousel: PropTypes.bool,
+    category: PropTypes.oneOf(['Design', 'Coding']),
+    description: PropTypes.string,
+    image: PropTypes.string,
+    imageAlt: PropTypes.string,
+    strapline: PropTypes.string,
+    tech: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string,
+  }).isRequired,
+};
