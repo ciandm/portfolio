@@ -1,6 +1,7 @@
 import React from 'react';
 import PrintMarkdown from '../../src/components/markdown/printMarkdown';
 import ProjectIntro from '../../src/components/ProjectIntro';
+import Carousel from '../../src/components/Carousel';
 import {
   getAllPortfolioProjects,
   getContentsBySlug,
@@ -32,6 +33,7 @@ export default function PortfolioShowcase({ projectData }) {
   return (
     <>
       <ProjectIntro {...projectData} />
+      <Carousel />
       <PrintMarkdown markdown={projectData.content} />
     </>
   );

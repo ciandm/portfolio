@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     right: -10rem;
     position: absolute;
     transform-origin: center;
-    transform: rotate(15deg);
+    transform: rotate(-15deg);
     width: 20rem;
     z-index: -1;
   }

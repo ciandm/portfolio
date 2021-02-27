@@ -1,6 +1,7 @@
 ---
 category: "Design"
 carousel: true
+carouselImages: ['/images/image-placeholder.jpg', '/images/image-placeholder.jpg', '/images/image-placeholder.jpg']
 description: "Developed an updated and in-depth brand book for CurrencyFair, to improve consistency across the brand as we began to scale and enter more countries."
 image: "/images/image-placeholder.jpg"
 imageAlt: "Placeholder"
