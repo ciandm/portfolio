@@ -30,7 +30,7 @@ function GetInTouchBanner({ backgroundColor, portfolioPageCurrent }) {
                 // Swap light blue background on hover for white if background is set to blue
                 ghost
               >
-                View my work
+                View my portfolio
               </Button>
             )}
           </S.Buttons>

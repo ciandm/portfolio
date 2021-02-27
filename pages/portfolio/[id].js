@@ -2,10 +2,14 @@ import React from 'react';
 import PrintMarkdown from '../../src/components/markdown/printMarkdown';
 import ProjectIntro from '../../src/components/ProjectIntro';
 import Carousel from '../../src/components/Carousel';
+import GetInTouchBanner from '../../src/components/shared/GetInTouchBanner';
 import {
   getAllPortfolioProjects,
   getContentsBySlug,
+  getProjectsBySlug,
 } from '../../data/markdown';
+import Projects from '../../src/components/Projects';
+import Heading from '../../src/components/shared/Typography/Heading';
 
 export async function getStaticPaths() {
   const posts = getAllPortfolioProjects();
@@ -22,14 +26,19 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const projectData = getContentsBySlug(params.id);
+  const otherProjects = getProjectsBySlug([
+    'brand-book',
+    'responsive-designo-website',
+  ]);
   return {
     props: {
+      otherProjects,
       projectData,
     },
   };
 }
 
-export default function PortfolioShowcase({ projectData }) {
+export default function PortfolioShowcase({ projectData, otherProjects }) {
   return (
     <>
       <ProjectIntro {...projectData} />
@@ -37,6 +46,13 @@ export default function PortfolioShowcase({ projectData }) {
         <Carousel carouselImages={projectData.data.carouselImages} />
       ) : null}
       <PrintMarkdown markdown={projectData.content} />
+      <Projects
+        backgroundColor="linkWater"
+        toggleDisplayed={false}
+        introDisplayed
+        projects={otherProjects}
+      />
+      <GetInTouchBanner backgroundColor="white" />
     </>
   );
 }
