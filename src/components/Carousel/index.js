@@ -1,9 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Container from './Container';
+import Image from './Image';
+import Paging, { PagingItem } from './Paging';
 
 function Carousel() {
   const settings = {
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+    appendDots: dots => <Paging dots={dots} />,
+    cssEase: 'ease-in-out',
+    customPaging: i => <PagingItem />,
     dots: true,
     infinite: true,
     // responsive: {
@@ -19,25 +26,15 @@ function Carousel() {
   };
   return (
     <Container>
-      <h2> Single Item</h2>
       <Slider {...settings}>
         <div>
-          <img src="/images/image-placeholder.jpg" alt="Placeholder" />
+          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
         </div>
         <div>
-          <h3>2</h3>
+          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
         </div>
         <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
+          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
         </div>
       </Slider>
     </Container>

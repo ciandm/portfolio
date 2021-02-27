@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as S from './styled';
 
 const Image = ({ src, alt }) => {
-  return <img src={src} alt={alt} />;
+  return <S.Img src={src} alt={alt} />;
 };
 
 export default Image;
