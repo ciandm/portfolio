@@ -5,8 +5,8 @@ const Paging = ({ dots }) => {
   return <S.Paging>{dots}</S.Paging>;
 };
 
-const PagingItem = () => {
-  return <S.PagingItem />;
+const PagingItem = ({ index, goToSlideHandler }) => {
+  return <S.PagingItem onClick={() => goToSlideHandler(index)} />;
 };
 
 export default Paging;
