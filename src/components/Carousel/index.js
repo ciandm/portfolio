@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import Container from './Container';
-import Image from './Image';
+import CarouselImage from './CarouselImage';
 import Paging, { PagingItem } from './Paging';
 import SlideArrow from './SlideArrow/index';
 
-function Carousel() {
+function Carousel({ carouselImages }) {
   const customSlider = useRef();
 
   const nextSlideHandler = () => {
@@ -42,18 +43,16 @@ function Carousel() {
   return (
     <Container>
       <Slider {...settings} ref={customSlider}>
-        <div>
-          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
-        </div>
-        <div>
-          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
-        </div>
-        <div>
-          <Image src="/images/image-placeholder.jpg" alt="Placeholder" />
-        </div>
+        {carouselImages.map(image => (
+          <CarouselImage key={image.src} imageSrc={image.src} alt={image.alt} />
+        ))}
       </Slider>
     </Container>
   );
 }
 
 export default Carousel;
+
+Carousel.propTypes = {
+  carouselImages: PropTypes.arrayOf(PropTypes.object),
+};

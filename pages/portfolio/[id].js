@@ -33,7 +33,9 @@ export default function PortfolioShowcase({ projectData }) {
   return (
     <>
       <ProjectIntro {...projectData} />
-      <Carousel />
+      {projectData.data.carousel ? (
+        <Carousel carouselImages={projectData.data.carouselImages} />
+      ) : null}
       <PrintMarkdown markdown={projectData.content} />
     </>
   );

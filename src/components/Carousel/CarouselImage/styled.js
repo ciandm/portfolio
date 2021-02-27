@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
+export const ImageContainer = styled.div`
   height: 35rem;
   object-fit: cover;
+  position: relative;
   width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {

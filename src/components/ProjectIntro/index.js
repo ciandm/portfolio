@@ -27,7 +27,7 @@ export default ProjectIntro;
 ProjectIntro.propTypes = {
   data: PropTypes.shape({
     carousel: PropTypes.bool,
-    carouselImages: PropTypes.arrayOf(PropTypes.string),
+    carouselImages: PropTypes.arrayOf(PropTypes.object),
     category: PropTypes.oneOf(['Design', 'Coding']),
     description: PropTypes.string,
     image: PropTypes.string,
