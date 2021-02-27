@@ -3,36 +3,37 @@ import Slider from 'react-slick';
 import Container from './Container';
 import Image from './Image';
 import Paging, { PagingItem } from './Paging';
+import SlideArrow from './SlideArrow/index';
 
 function Carousel() {
   const customSlider = useRef();
 
   const nextSlideHandler = () => {
-    Slider.slickNext();
+    customSlider.current.slickNext();
   };
 
+  const prevSlideHandler = () => {
+    customSlider.current.slickPrev();
+  };
+
+  // needs a ref to use method
   const goToSlideHandler = i => {
-    console.log(i);
     customSlider.current.slickGoTo(i);
   };
 
   const settings = {
-    // autoplay: true,
-    // autoplaySpeed: 5000,
     appendDots: dots => <Paging dots={dots} />,
+    autoplay: true,
+    autoplaySpeed: 5000,
     cssEase: 'ease-in-out',
     customPaging: i => (
       <PagingItem index={i} goToSlideHandler={goToSlideHandler} />
     ),
     dots: true,
     infinite: true,
-    // responsive: {
-    //   breakpoint: 1110,
-    //   settings: {
-    //     slidesToShow: 2,
-    //     slides
-    //   }
-    // },
+    lazyLoad: true,
+    nextArrow: <SlideArrow type="right" nextSlideHandler={nextSlideHandler} />,
+    prevArrow: <SlideArrow type="left" prevSlideHandler={prevSlideHandler} />,
     slidesToScroll: 1,
     slidesToShow: 1,
     speed: 500,

@@ -4,6 +4,7 @@ description: "Developed an updated and in-depth brand book for CurrencyFair, to 
 image: "/images/image-placeholder.jpg"
 imageAlt: "Placeholder"
 strapline: "React & styled components"
+tech: ["React", "Styled Components", "Figma"]
 title: "Responsive designo website"
 ---
 
