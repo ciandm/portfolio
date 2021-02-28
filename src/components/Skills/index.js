@@ -18,7 +18,7 @@ function Skills() {
     >
       <S.Wrapper>
         <S.Intro>
-          <Strapline>Key strengths, not exhaustive</Strapline>
+          <Strapline>Key strengths</Strapline>
           <Heading color="blackPearl" paddingBottom={0.4} type="h2">
             What I can bring to the table
           </Heading>
@@ -36,18 +36,18 @@ function Skills() {
           />
           <Skill
             iconBackground="cinderella"
-            heading="Graphic Design"
-            paragraph="Experience in print and digital design including branding, illustrations, visual identity and marketing assets."
+            heading="Animation"
+            paragraph="Capable of producing beautiful 2D animations that can bring web pages and products to life in either video, GIF or SVG format."
           />
           <Skill
             iconBackground="cherub"
-            heading="Graphic Design"
-            paragraph="Experience in print and digital design including branding, illustrations, visual identity and marketing assets."
+            heading="Web Design"
+            paragraph="I love creating beautiful and responsive websites, and enjoy collaborating with team members to bring designs to the next level."
           />
           <Skill
             iconBackground="selago"
-            heading="Graphic Design"
-            paragraph="Experience in print and digital design including branding, illustrations, visual identity and marketing assets."
+            heading="Web Development"
+            paragraph="I love to bring designs to life with  a strong understanding of HTML, CSS & JavaScript. I also enjoy using React to build web pages."
           />
         </S.SkillsGrid>
         <S.Buttons>

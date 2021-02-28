@@ -28,11 +28,11 @@ function HomeHero() {
             technologies.
           </Paragraph>
           <S.Buttons>
-            <Button variation="primary" as="a" href="/contact">
-              Get in touch
+            <Button variation="primary" as="a" href="/portfolio">
+              View my portfolio
             </Button>
-            <Button variation="secondary" as="a" href="/portfolio">
-              View my work
+            <Button variation="secondary" as="a" href="/contact">
+              Get in touch
             </Button>
           </S.Buttons>
         </S.Content>
