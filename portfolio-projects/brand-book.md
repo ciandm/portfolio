@@ -2,8 +2,8 @@
 category: "Design"
 carousel: true
 carouselImages: [
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"}, 
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"}, 
+  {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
+  {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
   {src: "/images/image-placeholder.jpg", alt: "Placeholder"}]
 description: "Developed an updated and in-depth brand book for CurrencyFair, to improve consistency across the brand as we began to scale and enter more countries."
 image: "/images/image-placeholder.jpg"
@@ -31,4 +31,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egest
 #### Another heading goes here
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
 
-![Placeholder image](/images/image-placeholder.jpg?height=300)
+![Placeholder image](/images/image-placeholder.jpg)

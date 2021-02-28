@@ -10,7 +10,7 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    padding: 0;
+    padding: 0 0 9.6rem;
   }
 `;
 
@@ -52,25 +52,26 @@ export const Markdown = styled.div`
 
   & img {
     object-fit: cover;
-    margin: 3.6rem 0;
-    width: 100%;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  & img[src~='height=250'] {
     height: 25rem;
+    margin: 3.6rem 0 0;
+    width: 100%;
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     margin: 0 auto;
     width: 75%;
+
+    & img {
+      height: 35rem;
+    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
+
+    & img {
+      height: 45rem;
+    }
   }
 `;

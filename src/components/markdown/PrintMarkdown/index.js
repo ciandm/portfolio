@@ -36,7 +36,7 @@ function PrintMarkdown({ markdown }) {
         h3: MarkdownComponents.H3,
         h4: MarkdownComponents.H4,
         h5: MarkdownComponents.H5,
-        img: MarkdownComponents.Img,
+        // img: MarkdownComponents.Img,
         p: MarkdownComponents.P,
       },
     })

@@ -6,18 +6,20 @@ import Heading from '../shared/Typography/Heading';
 import TechTags from './TechTags';
 import HeroSection from '../shared/HeroSection';
 import Paragraph from '../shared/Typography/Paragraph';
+import ProjectLink from './ProjectLink';
 
-function ProjectIntro({ data, content }) {
+function ProjectIntro({ data }) {
   return (
     <HeroSection>
       <Breadcrumbs category={data.category} />
-      <Heading color="blackPearl" type="h1" paddingBottom={0.4}>
+      <Heading color="blackPearl" type="h1" paddingBottom={0.8}>
         {data.title}
       </Heading>
-      <Paragraph color="blueBayoux" paddingBottom={1.2}>
+      <TechTags tech={data.tech} />
+      <Paragraph color="blueBayoux" paddingTop={1.2}>
         {data.description}
       </Paragraph>
-      <TechTags tech={data.tech} />
+      {data.links ? <ProjectLink links={data.links} /> : null}
     </HeroSection>
   );
 }
