@@ -13,8 +13,22 @@ tech: ["Illustrator", "InDesign", "Photoshop"]
 title: "Created a brand book for CurrencyFair"
 ---
 
-### Design 1 title
+### Refreshing the brand and improving consistency
+
+##### The problem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
+
+##### The solution
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
 
 ---
 
-Hello my name is Cian Dolphin-Murray how do you do?
+#### Applying my own take on the brand
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
+
+#### Another heading goes here
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa scelerisque egestas aliquam posuere sollicitudin.
+
+![Placeholder image](/images/image-placeholder.jpg?height=300)

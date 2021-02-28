@@ -22,22 +22,46 @@ export const Wrapper = styled.div`
 export const Markdown = styled.div`
   width: 100%;
 
-  & h2 {
-    padding-bottom: 2.4rem;
-  }
-
   & h3 {
+    margin-bottom: 2.4rem;
   }
 
   & h4 {
-    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
   }
 
   & h5 {
+    margin-bottom: 0.4rem;
+  }
+
+  p + p {
+    margin-top: 1.2rem;
+  }
+
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5 {
+    margin-top: 3.6rem;
   }
 
   & hr {
     border-top: 1px solid ${({ theme }) => theme.colors.secondary.periwinkle};
+    margin: 3.6rem 0;
+  }
+
+  & img {
+    object-fit: cover;
+    margin: 3.6rem 0;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & img[src~='height=250'] {
+    height: 25rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {

@@ -47,3 +47,36 @@ export function getProjectsBySlug(slugs = []) {
     };
   });
 }
+
+// Generate a random number to display random projects on project pages.
+function generateRandomNumbers(arrayLength) {
+  const generateNumber = () => {
+    return Math.floor(Math.random() * arrayLength);
+  };
+
+  const numberOne = generateNumber();
+  let numberTwo;
+  do {
+    numberTwo = generateNumber();
+  } while (numberTwo === numberOne);
+
+  return [numberOne, numberTwo];
+}
+
+// Filter projects by removing a specific project, specified through the arg, and then randomly choose two projects to display, using the generate random number function above.
+export function getRandomProjects(excluded) {
+  const fileNames = getSlugsFromDirectory(projectsDirectory)
+    .map(file => file.replace(/\.md$/, ''))
+    .filter(file => file !== excluded);
+  const [numberOne, numberTwo] = generateRandomNumbers(fileNames.length);
+  return fileNames.map((slug, index) => {
+    if (index !== numberOne && index !== numberTwo) {
+      return null;
+    }
+    const { data } = getContentsBySlug(slug);
+    return {
+      data,
+      slug,
+    };
+  });
+}

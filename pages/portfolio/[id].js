@@ -1,15 +1,14 @@
 import React from 'react';
-import PrintMarkdown from '../../src/components/markdown/printMarkdown';
+import PrintMarkdown from '../../src/components/markdown/PrintMarkdown';
 import ProjectIntro from '../../src/components/ProjectIntro';
 import Carousel from '../../src/components/Carousel';
 import GetInTouchBanner from '../../src/components/shared/GetInTouchBanner';
 import {
   getAllPortfolioProjects,
   getContentsBySlug,
-  getProjectsBySlug,
+  getRandomProjects,
 } from '../../data/markdown';
 import Projects from '../../src/components/Projects';
-import Heading from '../../src/components/shared/Typography/Heading';
 
 export async function getStaticPaths() {
   const posts = getAllPortfolioProjects();
@@ -26,10 +25,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const projectData = getContentsBySlug(params.id);
-  const otherProjects = getProjectsBySlug([
-    'brand-book',
-    'responsive-designo-website',
-  ]);
+  const otherProjects = getRandomProjects(params.id);
   return {
     props: {
       otherProjects,
