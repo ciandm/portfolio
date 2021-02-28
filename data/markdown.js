@@ -69,14 +69,18 @@ export function getRandomProjects(excluded) {
     .map(file => file.replace(/\.md$/, ''))
     .filter(file => file !== excluded);
   const [numberOne, numberTwo] = generateRandomNumbers(fileNames.length);
-  return fileNames.map((slug, index) => {
-    if (index !== numberOne && index !== numberTwo) {
-      return null;
-    }
-    const { data } = getContentsBySlug(slug);
-    return {
-      data,
-      slug,
-    };
-  });
+  // Filter the correct files before mapping, instead of a condition in the map which could return null or undefined and cause an error.
+  return fileNames
+    .filter(
+      slug =>
+        fileNames.indexOf(slug) === numberOne ||
+        fileNames.indexOf(slug) === numberTwo
+    )
+    .map(slug => {
+      const { data } = getContentsBySlug(slug);
+      return {
+        data,
+        slug,
+      };
+    });
 }

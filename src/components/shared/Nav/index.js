@@ -26,6 +26,10 @@ function Nav() {
 
   const router = useRouter();
 
+  useEffect(() => {
+    setOpen(false);
+  }, [router]);
+
   return (
     <S.Nav>
       <S.NavWrapper>
