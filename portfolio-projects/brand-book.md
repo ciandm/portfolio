@@ -2,7 +2,7 @@
 category: "Design"
 carousel: true
 carouselImages: [
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
+  {src: "/images/business-rebrand/book-test.png", alt: "Placeholder"},
   {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
   {src: "/images/image-placeholder.jpg", alt: "Placeholder"}]
 description: "Developed an updated and in-depth brand book for CurrencyFair, to improve consistency across the brand as we began to scale and enter more countries."
