@@ -4,13 +4,16 @@ import Section from '../shared/Section';
 import ProjectGrid from './ProjectGrid';
 import Project from './Project';
 import ProjectToggle from './ProjectToggle';
-import OtherProjectsIntro from './OtherProjectsIntro';
+import ProjectsIntro from './ProjectsIntro';
 
 function Projects({
   backgroundColor,
+  extraHeadingMargin,
   toggleDisplayed,
-  introDisplayed,
+  heading,
+  subheading,
   projects,
+  alignHeading,
   activeDisplay,
   updateDisplay,
 }) {
@@ -20,15 +23,21 @@ function Projects({
       paddingS={7.2}
       paddingM={8.4}
       paddingL={9.6}
-      textAlign="left"
     >
+      {heading ? (
+        <ProjectsIntro
+          extraHeadingMargin={extraHeadingMargin}
+          heading={heading}
+          subheading={subheading}
+          alignHeading={alignHeading}
+        />
+      ) : null}
       {toggleDisplayed ? (
         <ProjectToggle
           activeDisplay={activeDisplay}
           updateDisplay={updateDisplay}
         />
       ) : null}
-      {introDisplayed ? <OtherProjectsIntro /> : null}
       <ProjectGrid>
         {projects.map(project => (
           <Project key={project.slug} slug={project.slug} {...project.data} />
@@ -42,9 +51,11 @@ export default Projects;
 
 Projects.propTypes = {
   activeDisplay: PropTypes.oneOf(['Design', 'Coding']),
+  alignHeading: PropTypes.oneOf(['center', 'left']),
   backgroundColor: PropTypes.oneOf(['blackPearl', 'white', 'linkWater']),
-  introDisplayed: PropTypes.bool,
+  heading: PropTypes.string,
   projects: PropTypes.instanceOf(Array).isRequired,
+  subheading: PropTypes.string,
   toggleDisplayed: PropTypes.bool.isRequired,
   updateDisplay: PropTypes.func,
 };

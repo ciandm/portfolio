@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ToggleContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary.periwinkle};
-  border-radius: 1.2rem;
+  border-radius: 4.8rem;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.03);
   display: grid;
   grid-template-columns: 15rem 15rem;
@@ -12,7 +12,7 @@ export const ToggleContainer = styled.div`
 
 export const Slide = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.denim};
-  border-radius: 1.2rem;
+  border-radius: 4.8rem;
   box-shadow: 0px 4px 16px rgba(9, 119, 200, 0.36);
   height: 100%;
   left: 0;
@@ -26,7 +26,7 @@ export const Slide = styled.div`
 export const Toggle = styled.button`
   align-items: center;
   background-color: transparent;
-  border-radius: 1.2rem;
+  border-radius: 4.8rem;
   border: none;
   color: ${({ active, theme }) =>
     active ? theme.colors.primary.white : theme.colors.secondary.blueBayoux};

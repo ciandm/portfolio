@@ -27,6 +27,8 @@ export default function Home({ projects }) {
       <Skills />
       <Projects
         backgroundColor="white"
+        heading="Some recent work"
+        extraHeadingMargin
         toggleDisplayed={false}
         projects={projects}
       />

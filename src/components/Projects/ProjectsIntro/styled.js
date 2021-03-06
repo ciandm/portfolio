@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.constants.maxWidth};
   padding: 0 1.6rem;
+  margin-bottom: ${({ extraHeadingMargin }) =>
+    extraHeadingMargin ? '4.8rem' : '2.4rem'};
   width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
@@ -15,7 +17,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  text-align: left;
+  display: grid;
+  gap: 1.2rem;
+  text-align: ${({ alignHeading }) => alignHeading};
   width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
@@ -24,6 +28,6 @@ export const Container = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    max-width: 83.3333%;
+    max-width: 100%;
   }
 `;

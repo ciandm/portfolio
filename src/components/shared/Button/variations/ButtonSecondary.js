@@ -4,13 +4,20 @@ import Link from 'next/link';
 import { MdArrowForward } from 'react-icons/md';
 import * as S from './styled';
 
-const ButtonSecondary = ({ href, children, ...restProps }) => {
+const ButtonSecondary = ({ href, as, children, ...restProps }) => {
+  if (as === 'a') {
+    return (
+      <Link href={href} passHref>
+        <S.ButtonSecondary {...restProps}>
+          {children} <MdArrowForward />
+        </S.ButtonSecondary>
+      </Link>
+    );
+  }
   return (
-    <Link href={href} passHref>
-      <S.ButtonSecondary {...restProps}>
-        {children} <MdArrowForward />
-      </S.ButtonSecondary>
-    </Link>
+    <S.ButtonSecondary {...restProps}>
+      {children} <MdArrowForward />
+    </S.ButtonSecondary>
   );
 };
 
@@ -18,5 +25,5 @@ export default ButtonSecondary;
 
 ButtonSecondary.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
 };

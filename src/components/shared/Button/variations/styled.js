@@ -4,10 +4,12 @@ export const Button = styled.button`
   align-self: center;
   font-size: 1.6rem;
   font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
   justify-self: flex-start;
   line-height: 1.75;
   outline: none;
+  transition: background-color 0.1s ease-in-out;
 
   & + & {
     margin-left: 1.6rem;
@@ -37,6 +39,7 @@ export const ButtonPrimary = styled(Button)`
 
 export const ButtonSecondary = styled(Button)`
   align-items: center;
+  background-color: transparent;
   border: none;
   border-radius: 0.6rem;
   display: flex;

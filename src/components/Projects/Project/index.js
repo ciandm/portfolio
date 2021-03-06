@@ -3,29 +3,26 @@ import * as S from './styled';
 import ProjectImage from './ProjectImage/index';
 import Strapline from '../../shared/Typography/Strapline';
 import Heading from '../../shared/Typography/Heading';
-import Paragraph from '../../shared/Typography/Paragraph';
 import Button from '../../shared/Button';
 
-function Project({ slug, strapline, title, description, image, imageAlt }) {
+function Project({ slug, strapline, title, image, imageAlt }) {
   return (
-    <S.Project>
-      <S.ImageWrapper>
-        <S.ImageContainer>
-          <ProjectImage src={image} alt={imageAlt} />
-        </S.ImageContainer>
-      </S.ImageWrapper>
-      <S.Content>
+    <S.Project href={`portfolio/${slug}`}>
+      <S.Header>
         <Strapline>{strapline}</Strapline>
-        <Heading color="white" type="h3" paddingBottom={0.4}>
+        <Heading color="blackPearl" type="h4">
           {title}
         </Heading>
-        <Paragraph color="white" paddingBottom={2.4}>
-          {description}
-        </Paragraph>
-        <Button variation="primary" as="a" href={`/portfolio/${slug}`}>
+      </S.Header>
+      <S.ImageContainer>
+        <ProjectImage src={image} alt={imageAlt} />
+      </S.ImageContainer>
+      <S.Footer>
+        <S.Date>2020</S.Date>
+        <Button variation="secondary" as="button" tabIndex="-1">
           View project
         </Button>
-      </S.Content>
+      </S.Footer>
     </S.Project>
   );
 }
