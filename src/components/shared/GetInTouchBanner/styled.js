@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: ${({ backgroundColor, theme }) =>
-    backgroundColor === 'white'
-      ? theme.colors.primary.white
-      : theme.colors.secondary.linkWater};
+  background-color: ${({ theme }) => theme.colors.primary.blackPearl};
   display: flex;
   justify-content: center;
-  padding: 6rem 1.6rem;
+  padding: 4.8rem 1.6rem;
   position: relative;
   z-index: 1;
 
@@ -22,25 +19,12 @@ export const Section = styled.section`
     z-index: -1;
   }
 
-  &::before {
-    background-image: url('/images/contact-background.svg');
-    background-repeat: repeat;
-    opacity: 0.07;
-  }
-
-  &::after {
-    background: ${({ backgroundColor }) =>
-      backgroundColor === 'white'
-        ? 'linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, hsl(0, 0%, 100%) 100%)'
-        : 'linear-gradient(0deg, hsla(212, 57%, 98%, 0) 0%, hsl(212, 57%, 98%) 100%)'};
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    padding: 4.8rem 2.4rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
-    padding: 7.2rem 2.4rem;
-  }
-
-  @media ${({ theme }) => theme.mediaQueries.tablet} {
-    padding: 8.4rem 0;
+    padding: 6rem 0;
   }
 `;
 
@@ -49,6 +33,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   max-width: ${({ theme }) => theme.constants.maxWidth};
   width: 100%;
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    justify-content: flex-start;
+  }
 `;
 
 export const Content = styled.div`

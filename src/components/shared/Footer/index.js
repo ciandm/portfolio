@@ -1,22 +1,31 @@
 import React from 'react';
-import { SiGithub } from 'react-icons/si';
-import Link from 'next/link';
 import * as S from './styled';
-import Paragraph from '../Typography/Paragraph';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 const Footer = () => {
+  const isTablet = useWindowSize() > 767;
   return (
     <S.Footer>
       <S.FooterWrapper>
-        <Link href="/" passHref>
-          <S.Icon>
-            <SiGithub />
-          </S.Icon>
-        </Link>
-        <Paragraph color="white">
-          Designed and built by myself, <strong>Cian Dolphin</strong>, with
-          Figma & React.
-        </Paragraph>
+        <S.FooterLogo />
+        {isTablet && (
+          <S.FooterNote>Website designed and built by me 🐬</S.FooterNote>
+        )}
+        <S.FooterLinks>
+          <S.FooterItem>
+            <S.FooterLink href="https://github.com/ciandm" target="_blank">
+              Github
+            </S.FooterLink>
+          </S.FooterItem>
+          <S.FooterItem>
+            <S.FooterLink
+              href="https://www.linkedin.com/in/cian-dolphin-murray-92b05712a/"
+              target="_blank"
+            >
+              LinkedIn
+            </S.FooterLink>
+          </S.FooterItem>
+        </S.FooterLinks>
       </S.FooterWrapper>
     </S.Footer>
   );

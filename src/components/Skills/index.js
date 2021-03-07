@@ -35,11 +35,6 @@ function Skills() {
             paragraph="Experience in print and digital design including branding, illustrations, visual identity and marketing assets."
           />
           <Skill
-            iconBackground="cinderella"
-            heading="Animation"
-            paragraph="Capable of producing beautiful 2D animations that can bring web pages and products to life in either video, GIF or SVG format."
-          />
-          <Skill
             iconBackground="cherub"
             heading="Web Design"
             paragraph="I love creating beautiful and responsive websites, and enjoy collaborating with team members to bring designs to the next level."
@@ -48,6 +43,11 @@ function Skills() {
             iconBackground="selago"
             heading="Web Development"
             paragraph="I love to bring designs to life with  a strong understanding of HTML, CSS & JavaScript. I also enjoy using React to build web pages."
+          />
+          <Skill
+            iconBackground="cinderella"
+            heading="Animation"
+            paragraph="Capable of producing beautiful 2D animations that can bring web pages and products to life in either video, GIF or SVG format."
           />
         </S.SkillsGrid>
         <S.Buttons>

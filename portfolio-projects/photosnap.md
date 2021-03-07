@@ -2,11 +2,13 @@
 category: "Coding"
 carousel: true,
 carouselImages: [
-  {src: "/images/photosnap/photosnap.png", alt: "Home page of Photosnap"},
+  {src: "/images/photosnap/photosnap_home.jpg", alt: "Home page of Photosnap"},
+  {src: "/images/photosnap/photosnap_mobile.jpg", alt: "Home page of Photosnap"},
+  {src: "/images/photosnap/photosnap_stories-features.jpg", alt: "Home page of Photosnap"},
 ]
-description: "Used React and SCSS to build a website for a fictional landing page, for a platform called Photosnap, which makes it easy to share for photographers to share their photos and connect with others. It included the strong use of imagery throughout, with a full-width design implemented that really helps showcase images."
-image: "/images/image-placeholder.jpg"
-imageAlt: "Placeholder"
+description: "Using designs from www.frontendmentor.io to build a website for a fictional landing page, for a platform called Photosnap, which makes it easy to share for photographers to share their photos and connect with others. It included the strong use of imagery throughout, with a full-width design implemented that really helps showcase images.\nHello"
+image: "/images/photosnap/photosnap_thumbnail.jpg"
+imageAlt: "Responsive Photosnap website"
 links: [
   {
     github: true,
