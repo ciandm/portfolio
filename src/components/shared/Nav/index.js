@@ -49,7 +49,12 @@ function Nav() {
             ) : null}
             <Link href="/">Home</Link>
           </S.NavItem>
-          <S.NavItem active={router.pathname === '/portfolio'}>
+          <S.NavItem
+            active={
+              router.pathname === '/portfolio' ||
+              router.pathname === '/portfolio/[id]'
+            }
+          >
             {isMobile ? (
               <S.NavIcon>
                 <MdColorLens />
