@@ -25,7 +25,7 @@ function Portfolio({ projects }) {
       <Head>
         <title>Portfolio | Cian Dolphin-Murray</title>
       </Head>
-      <HeroSection backgroundPattern>
+      <HeroSection backgroundColor="linkWater" backgroundPattern>
         <Heading type="h1" color="blackPearl" paddingBottom={0.4}>
           Portfolio
         </Heading>
@@ -39,13 +39,13 @@ function Portfolio({ projects }) {
         </Paragraph>
       </HeroSection>
       <Projects
-        backgroundColor="linkWater"
+        backgroundColor="white"
         toggleDisplayed
         updateDisplay={updateDisplay}
         activeDisplay={activeDisplay}
         projects={projects.filter(p => p.data.category === activeDisplay)}
       />
-      <GetInTouchBanner backgroundColor="white" portfolioPageCurrent />
+      <GetInTouchBanner backgroundColor="linkWater" portfolioPageCurrent />
     </>
   );
 }

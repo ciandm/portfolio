@@ -19,7 +19,7 @@ const ProjectsIntro = ({
           </Heading>
         ) : null}
         {subheading ? (
-          <Paragraph color="blueBayoux" paddingBottom={6}>
+          <Paragraph color="blueBayoux" paddingBottom={2.4}>
             {subheading}
           </Paragraph>
         ) : null}

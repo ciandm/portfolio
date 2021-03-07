@@ -4,9 +4,14 @@ import * as S from './styled';
 // Components
 import Section from '../Section';
 
-function HeroSection({ children, backgroundPattern }) {
+function HeroSection({ children, backgroundColor, backgroundPattern }) {
   return (
-    <Section backgroundColor="white" paddingS={6} paddingM={7.2} paddingL={8.4}>
+    <Section
+      backgroundColor={backgroundColor}
+      paddingS={6}
+      paddingM={7.2}
+      paddingL={8.4}
+    >
       <S.Wrapper>
         <S.Content backgroundPattern={backgroundPattern}>{children}</S.Content>
       </S.Wrapper>
@@ -17,5 +22,6 @@ function HeroSection({ children, backgroundPattern }) {
 export default HeroSection;
 
 HeroSection.propTypes = {
+  backgroundColor: PropTypes.oneOf(['white', 'linkWater']).isRequired,
   backgroundPattern: PropTypes.bool,
 };

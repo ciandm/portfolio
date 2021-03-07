@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  background-color: ${({ theme }) => theme.colors.secondary.linkWater};
   display: flex;
   justify-content: center;
   padding: 0 1.6rem 7.2rem;
@@ -32,6 +33,10 @@ export const Markdown = styled.div`
 
   & h5 {
     margin-bottom: 0.4rem;
+  }
+
+  & p {
+    line-height: 2;
   }
 
   p + p {

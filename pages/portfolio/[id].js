@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import PrintMarkdown from '../../src/components/markdown/PrintMarkdown';
 import ProjectIntro from '../../src/components/ProjectIntro';
 import Carousel from '../../src/components/Carousel';
@@ -37,18 +38,25 @@ export async function getStaticProps({ params }) {
 export default function PortfolioShowcase({ projectData, otherProjects }) {
   return (
     <>
-      <ProjectIntro {...projectData} />
+      <Head>
+        <title>
+          Portfolio | {projectData.data.title} | Cian Dolphin-Murray
+        </title>
+      </Head>
+      <ProjectIntro backgroundColor="linkWater" {...projectData} />
       {projectData.data.carousel ? (
         <Carousel carouselImages={projectData.data.carouselImages} />
       ) : null}
       <PrintMarkdown markdown={projectData.content} />
       <Projects
-        backgroundColor="linkWater"
+        backgroundColor="white"
         toggleDisplayed={false}
+        heading="But wait. There's more."
+        subheading="Check out a few of my other projects that I’ve worked on."
         introDisplayed
         projects={otherProjects}
       />
-      <GetInTouchBanner backgroundColor="white" />
+      <GetInTouchBanner backgroundColor="linkWater" />
     </>
   );
 }

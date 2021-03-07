@@ -8,9 +8,9 @@ import HeroSection from '../shared/HeroSection';
 import Paragraph from '../shared/Typography/Paragraph';
 import ProjectLink from './ProjectLink';
 
-function ProjectIntro({ data }) {
+function ProjectIntro({ backgroundColor, data }) {
   return (
-    <HeroSection>
+    <HeroSection backgroundColor={backgroundColor}>
       <Breadcrumbs category={data.category} />
       <Heading color="blackPearl" type="h1" paddingBottom={0.8}>
         {data.title}
@@ -27,6 +27,7 @@ function ProjectIntro({ data }) {
 export default ProjectIntro;
 
 ProjectIntro.propTypes = {
+  backgroundColor: PropTypes.oneOf(['white', 'linkWater']).isRequired,
   data: PropTypes.shape({
     carousel: PropTypes.bool,
     carouselImages: PropTypes.arrayOf(PropTypes.object),

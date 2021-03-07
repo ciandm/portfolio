@@ -33,5 +33,4 @@ Section.propTypes = {
   paddingL: PropTypes.number.isRequired,
   paddingM: PropTypes.number.isRequired,
   paddingS: PropTypes.number.isRequired,
-  textAlign: PropTypes.oneOf(['left', 'center']),
 };

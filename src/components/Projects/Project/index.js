@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import * as S from './styled';
 import ProjectImage from './ProjectImage/index';
 import Strapline from '../../shared/Typography/Strapline';
@@ -6,8 +7,10 @@ import Heading from '../../shared/Typography/Heading';
 import Button from '../../shared/Button';
 
 function Project({ slug, strapline, title, image, imageAlt }) {
+  const router = useRouter();
+  console.log(router);
   return (
-    <S.Project href={`portfolio/${slug}`}>
+    <S.Project href={`/portfolio/${slug}`}>
       <S.Header>
         <Strapline>{strapline}</Strapline>
         <Heading color="blackPearl" type="h4">

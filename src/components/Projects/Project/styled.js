@@ -12,14 +12,8 @@ export const Project = styled.a`
   }
 
   &:hover img,
-  &:focus img,
-  &:focus h4,
-  &:hover h4 {
-    opacity: 0.8;
-  }
-
-  & h4 {
-    transition: opacity 0.1s ease-in-out;
+  &:focus img {
+    transform: scale(1.025);
   }
 
   &:focus button {
@@ -45,7 +39,7 @@ export const ImageContainer = styled.div`
   width: 100%;
 
   & img {
-    transition: opacity 0.1s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
 `;
 

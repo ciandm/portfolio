@@ -24,7 +24,7 @@ function Carousel({ carouselImages }) {
 
   const settings = {
     appendDots: dots => <Paging dots={dots} />,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     cssEase: 'ease-in-out',
     customPaging: i => (
