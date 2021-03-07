@@ -7,6 +7,7 @@ import Heading from '../../shared/Typography/Heading';
 import * as S from './styled';
 import Paragraph from '../../shared/Typography/Paragraph';
 import MarkdownImage from '../MarkdownImage';
+import MarkdownCode from '../MarkdownCode';
 
 function PrintMarkdown({ markdown }) {
   // Defining which components should be used when printing out markdown
@@ -28,6 +29,7 @@ function PrintMarkdown({ markdown }) {
     ),
     Img: props => <MarkdownImage {...props} />,
     P: ({ children }) => <Paragraph color="blueBayoux">{children}</Paragraph>,
+    Pre: ({ children }) => <MarkdownCode {...children} />,
   };
 
   const content = unified()
@@ -40,6 +42,7 @@ function PrintMarkdown({ markdown }) {
         h5: MarkdownComponents.H5,
         img: MarkdownComponents.Img,
         p: MarkdownComponents.P,
+        pre: MarkdownComponents.Pre,
       },
     })
     .processSync(markdown).result;

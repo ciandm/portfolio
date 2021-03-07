@@ -8,7 +8,7 @@ import Skills from '../src/components/Skills';
 export async function getStaticProps() {
   const projects = getProjectsBySlug([
     'personal-brochure',
-    'responsive-designo-website',
+    'designo',
     'registration-page',
   ]);
   return {

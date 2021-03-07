@@ -32,6 +32,7 @@ export const Toggle = styled.button`
     active ? theme.colors.primary.white : theme.colors.secondary.blueBayoux};
   cursor: pointer;
   display: flex;
+  font-family: inherit;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.5;
