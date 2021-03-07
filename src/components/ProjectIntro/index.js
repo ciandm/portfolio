@@ -16,9 +16,20 @@ function ProjectIntro({ backgroundColor, data }) {
         {data.title}
       </Heading>
       <TechTags tech={data.tech} />
-      <Paragraph color="blueBayoux" paddingTop={1.2}>
-        {data.description}
-      </Paragraph>
+      {/* If the description has more than one line in the markdown, it will be set as an array so this checks for that use case */}
+      {Array.isArray(data.description) ? (
+        data.description.map((d, index) => {
+          return (
+            <Paragraph key={index} color="blueBayoux" paddingTop={1.2}>
+              {d}
+            </Paragraph>
+          );
+        })
+      ) : (
+        <Paragraph color="blueBayoux" paddingTop={1.2}>
+          {data.description}
+        </Paragraph>
+      )}
       {data.links ? <ProjectLink links={data.links} /> : null}
     </HeroSection>
   );
@@ -32,7 +43,7 @@ ProjectIntro.propTypes = {
     carousel: PropTypes.bool,
     carouselImages: PropTypes.arrayOf(PropTypes.object),
     category: PropTypes.oneOf(['Design', 'Coding']),
-    description: PropTypes.string,
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
     image: PropTypes.string,
     imageAlt: PropTypes.string,
     strapline: PropTypes.string,

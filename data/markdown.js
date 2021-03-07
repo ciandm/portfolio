@@ -56,11 +56,16 @@ function generateRandomNumbers(arrayLength) {
 
   const numberOne = generateNumber();
   let numberTwo;
+  let numberThree;
   do {
     numberTwo = generateNumber();
   } while (numberTwo === numberOne);
 
-  return [numberOne, numberTwo];
+  do {
+    numberThree = generateNumber();
+  } while (numberThree === numberTwo || numberThree === numberOne);
+
+  return [numberOne, numberTwo, numberThree];
 }
 
 // Filter projects by removing a specific project, specified through the arg, and then randomly choose two projects to display, using the generate random number function above.
@@ -68,13 +73,16 @@ export function getRandomProjects(excluded) {
   const fileNames = getSlugsFromDirectory(projectsDirectory)
     .map(file => file.replace(/\.md$/, ''))
     .filter(file => file !== excluded);
-  const [numberOne, numberTwo] = generateRandomNumbers(fileNames.length);
+  const [numberOne, numberTwo, numberThree] = generateRandomNumbers(
+    fileNames.length
+  );
   // Filter the correct files before mapping, instead of a condition in the map which could return null or undefined and cause an error.
   return fileNames
     .filter(
       slug =>
         fileNames.indexOf(slug) === numberOne ||
-        fileNames.indexOf(slug) === numberTwo
+        fileNames.indexOf(slug) === numberTwo ||
+        fileNames.indexOf(slug) === numberThree
     )
     .map(slug => {
       const { data } = getContentsBySlug(slug);
