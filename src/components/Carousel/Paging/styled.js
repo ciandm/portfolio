@@ -29,7 +29,7 @@ export const Paging = styled.ul`
   display: flex;
   justify-content: center;
   list-style: none;
-  padding-top: 1.6rem;
+  padding-top: 3.6rem;
 
   & li.slick-active ${PagingItem}::before {
     background-color: ${({ theme }) => theme.colors.primary.denim};

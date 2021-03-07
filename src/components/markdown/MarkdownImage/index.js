@@ -1,11 +1,12 @@
 import React from 'react';
+import * as S from './styled';
 
 const MarkdownImage = ({ src, alt }) => {
   return (
-    <figure>
-      <img src={src} alt={alt} />
-      {alt}
-    </figure>
+    <S.Figure>
+      <S.Image src={src} alt={alt} />
+      <S.Caption>{alt}</S.Caption>
+    </S.Figure>
   );
 };
 

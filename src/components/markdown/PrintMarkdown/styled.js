@@ -55,28 +55,13 @@ export const Markdown = styled.div`
     margin: 3.6rem 0;
   }
 
-  & img {
-    object-fit: cover;
-    height: 25rem;
-    margin: 3.6rem 0 0;
-    width: 100%;
-  }
-
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     margin: 0 auto;
     width: 75%;
-
-    & img {
-      height: 35rem;
-    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
-
-    & img {
-      height: 45rem;
-    }
   }
 `;

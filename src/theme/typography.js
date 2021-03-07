@@ -35,7 +35,7 @@ export const H5 = css`
 export const Body = css`
   font-weight: normal;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.75;
 `;
 
 export const SmallCaps = css`
