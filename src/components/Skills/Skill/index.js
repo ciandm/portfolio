@@ -5,10 +5,12 @@ import * as S from './styled';
 import Paragraph from '../../shared/Typography/Paragraph';
 import Heading from '../../shared/Typography/Heading';
 
-const Skill = ({ heading, paragraph, iconBackground }) => {
+const Skill = ({ icon, heading, paragraph, iconBackground, iconColour }) => {
   return (
     <S.Skill>
-      <S.Icon background={iconBackground} />
+      <S.Icon background={iconBackground} iconColour={iconColour}>
+        {icon}
+      </S.Icon>
       <Heading type="h4" color="blackPearl">
         {heading}
       </Heading>

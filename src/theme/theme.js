@@ -19,7 +19,9 @@ const theme = {
       fringyFlower: 'hsl(140, 46%, 85%)',
       parsley: 'hsl(140, 61%, 20%)',
       redViolet: 'hsl(332, 80%, 45%)',
+      royalBlue: 'hsl(252, 80%, 61%)',
       selago: 'hsl(251, 81%, 92%)',
+      tanHide: 'hsl(18, 92%, 66%)',
     },
   },
   constants: {

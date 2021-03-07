@@ -1,4 +1,8 @@
 import React from 'react';
+import { AiFillCode } from 'react-icons/ai';
+import { BiVector } from 'react-icons/bi';
+import { RiDragDropLine } from 'react-icons/ri';
+import { MdSlowMotionVideo } from 'react-icons/md';
 import * as S from './styled';
 // Components
 import Strapline from '../shared/Typography/Strapline';
@@ -30,22 +34,30 @@ function Skills() {
         </S.Intro>
         <S.SkillsGrid>
           <Skill
+            icon={<BiVector />}
             iconBackground="fringyFlower"
+            iconColour="eucalyptus"
             heading="Graphic Design"
             paragraph="Experience in print and digital design including branding, illustrations, visual identity and marketing assets."
           />
           <Skill
+            icon={<RiDragDropLine />}
             iconBackground="cherub"
+            iconColour="redViolet"
             heading="Web Design"
             paragraph="I love creating beautiful and responsive websites, and enjoy collaborating with team members to bring designs to the next level."
           />
           <Skill
+            icon={<AiFillCode />}
             iconBackground="selago"
+            iconColour="royalBlue"
             heading="Web Development"
             paragraph="I love to bring designs to life with  a strong understanding of HTML, CSS & JavaScript. I also enjoy using React to build web pages."
           />
           <Skill
+            icon={<MdSlowMotionVideo />}
             iconBackground="cinderella"
+            iconColour="tanHide"
             heading="Animation"
             paragraph="Capable of producing beautiful 2D animations that can bring web pages and products to life in either video, GIF or SVG format."
           />
