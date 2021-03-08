@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import * as S from './styled';
 // Components
-import Section from '../shared/Section';
 import Intro from './Intro';
 import Input from './Input';
 import Button from '../shared/Button';
+import FormSubmission from './FormSubmission';
 
-function Form() {
+function Form({ submitted, handleFormSubmission }) {
   const [inputs, setInputs] = useState({
     email: '',
     message: '',
@@ -49,57 +49,56 @@ function Form() {
     }
 
     if (formValid) {
-      console.log('Submitted');
+      handleFormSubmission();
     }
   };
 
   return (
-    <Section
-      backgroundColor="linkWater"
-      paddingS={6}
-      paddingM={7.2}
-      paddingL={8.4}
-    >
+    <S.Section>
       <S.Wrapper>
         <S.Container>
           <S.Intro>
             <Intro />
           </S.Intro>
-          <S.Form onSubmit={e => handleSubmit(e)}>
-            <Input
-              error={errors.name}
-              handleInputChange={handleInputChange}
-              label="Your name"
-              name="name"
-              placeholder="John Doe"
-              type="text"
-              value={inputs.name}
-            />
-            <Input
-              error={errors.email}
-              handleInputChange={handleInputChange}
-              label="Your email"
-              name="email"
-              placeholder="johndoe@sesamestreet.com"
-              type="email"
-              value={inputs.email}
-            />
-            <Input
-              as="textarea"
-              error={errors.message}
-              handleInputChange={handleInputChange}
-              label="Your message"
-              name="message"
-              placeholder="Your message goes here"
-              value={inputs.message}
-            />
-            <Button alignSelf="stretch" as="button" type="submit">
-              Send message
-            </Button>
-          </S.Form>
+          {submitted ? (
+            <FormSubmission />
+          ) : (
+            <S.Form onSubmit={e => handleSubmit(e)}>
+              <Input
+                error={errors.name}
+                handleInputChange={handleInputChange}
+                label="Your name"
+                name="name"
+                placeholder="John Doe"
+                type="text"
+                value={inputs.name}
+              />
+              <Input
+                error={errors.email}
+                handleInputChange={handleInputChange}
+                label="Your email"
+                name="email"
+                placeholder="johndoe@sesamestreet.com"
+                type="email"
+                value={inputs.email}
+              />
+              <Input
+                as="textarea"
+                error={errors.message}
+                handleInputChange={handleInputChange}
+                label="Your message"
+                name="message"
+                placeholder="Your message goes here"
+                value={inputs.message}
+              />
+              <Button alignSelf="stretch" as="button" type="submit">
+                Send message
+              </Button>
+            </S.Form>
+          )}
         </S.Container>
       </S.Wrapper>
-    </Section>
+    </S.Section>
   );
 }
 

@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  background-color: ${({ theme }) => theme.colors.secondary.linkWater};
+  display: flex;
+  justify-content: center;
+  // minus height of nav and footer
+  min-height: calc(100vh - 144px);
+  overflow: hidden;
+  padding: 6rem 0;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    min-height: calc(100vh - 159px);
+    padding: 7.2rem 0;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    min-height: calc(100vh - 183px);
+    padding: 8.4rem 0;
+  }
+`;
+
 export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.constants.maxWidth};
   padding: 0 1.6rem;
