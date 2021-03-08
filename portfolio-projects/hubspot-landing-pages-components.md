@@ -52,7 +52,9 @@ title: "Designed and built HubSpot landing pages and components"
 --- 
 
 #### Building a custom audio player with vanilla JavaScript
+
 ![The custom audio player built for a podcast landing page, with a waveform created using Wavesurfer.js](/images/hubspot-landing-pages-components/hubspot-lp-components_podcast.jpg)
+
 Figuring out how to create this interactive component was a fun challenge. As the subscription was shared across multiple components - the subscription selection, step list and modal - I created a  provider with a useSubscription hook that allowed the components mentioned to access this data. As there was sometimes multiple actions happening every time a user selected an option, I used a reducer. This allowed me to solve the complex state management with easy to follow actions.
 
 ```

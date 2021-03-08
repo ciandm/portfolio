@@ -27,7 +27,7 @@ function Portfolio({ projects }) {
       </Head>
       <HeroSection backgroundColor="linkWater" backgroundPattern>
         <Heading type="h1" color="blackPearl" paddingBottom={0.4}>
-          Portfolio
+          Some of my work
         </Heading>
         <Paragraph color="blueBayoux">
           I’m very proud of the work I’ve produced, and I am constantly trying
