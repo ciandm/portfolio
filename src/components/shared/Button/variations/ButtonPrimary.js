@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import * as S from './styled';
 
-const ButtonPrimary = ({ as, href, children, ...restProps }) => {
+const ButtonPrimary = ({
+  as,
+  href,
+  children,
+  handleButtonClick,
+  ...restProps
+}) => {
   if (as === 'a') {
     return (
       <Link href={href} passHref>
@@ -13,7 +19,14 @@ const ButtonPrimary = ({ as, href, children, ...restProps }) => {
       </Link>
     );
   }
-  return <S.ButtonPrimary {...restProps}>{children}</S.ButtonPrimary>;
+  return (
+    <S.ButtonPrimary
+      onClick={handleButtonClick ? () => handleButtonClick() : null}
+      {...restProps}
+    >
+      {children}
+    </S.ButtonPrimary>
+  );
 };
 
 export default ButtonPrimary;

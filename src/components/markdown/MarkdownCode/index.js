@@ -1,23 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import Button from '../../shared/Button';
+import * as S from './styled';
 
-const customStyling = {
-  fontSize: '16px',
-  lineHeight: '1.5',
-  margin: '3.6rem 0',
-  padding: '3.6rem',
-};
+const MarkdownCode = ({ children }) => {
+  const [open, setOpen] = useState(false);
+  const customStyling = {
+    backgroundColor: 'hsl(213, 80%, 12%)',
+    fontSize: '16px',
+    lineHeight: '1.5',
+    // margin: '3.6rem 0',
+    overflowX: open ? 'auto' : 'hidden',
+    overflowY: 'hidden',
+    padding: '3.6rem',
+  };
 
-const MarkdownCode = children => {
+  const handleCodeToggle = () => {
+    setOpen(prev => !prev);
+  };
+
   return (
-    <SyntaxHighlighter
-      language="javascript"
-      style={dracula}
-      customStyle={customStyling}
-    >
-      {children[0].props.children[0]}
-    </SyntaxHighlighter>
+    <S.Wrapper>
+      <Button
+        handleButtonClick={handleCodeToggle}
+        as="button"
+        variation="primary"
+      >
+        {open ? 'Hide code' : 'Show code'}
+      </Button>
+      <S.Container open={open}>
+        <SyntaxHighlighter
+          style={dracula}
+          language="javascript"
+          customStyle={customStyling}
+        >
+          {children[0].props.children[0]}
+        </SyntaxHighlighter>
+      </S.Container>
+    </S.Wrapper>
   );
 };
 

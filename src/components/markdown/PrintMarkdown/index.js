@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import unified from 'unified';
 import parse from 'remark-parse';
@@ -29,7 +30,7 @@ function PrintMarkdown({ markdown }) {
     ),
     Img: props => <MarkdownImage {...props} />,
     P: ({ children }) => <Paragraph color="blueBayoux">{children}</Paragraph>,
-    Pre: ({ children }) => <MarkdownCode {...children} />,
+    Pre: props => <MarkdownCode {...props} />,
   };
 
   const content = unified()

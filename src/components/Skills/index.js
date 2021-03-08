@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillCode } from 'react-icons/ai';
+import { AiOutlineCode } from 'react-icons/ai';
 import { BiVector } from 'react-icons/bi';
 import { RiDragDropLine } from 'react-icons/ri';
 import { MdSlowMotionVideo } from 'react-icons/md';
@@ -48,7 +48,7 @@ function Skills() {
             paragraph="I love creating beautiful and responsive websites, and enjoy collaborating with team members to bring designs to the next level."
           />
           <Skill
-            icon={<AiFillCode />}
+            icon={<AiOutlineCode />}
             iconBackground="selago"
             iconColour="royalBlue"
             heading="Web Development"

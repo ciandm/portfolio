@@ -29,7 +29,8 @@ title: "Coffeeroasters website with interactive subscription selection"
 
 #### Creating the interactive subscription selection
 Figuring out how to create this interactive component was a fun challenge. As the subscription was shared across multiple components - the subscription selection, step list and modal - I created a  provider with a useSubscription hook that allowed the components mentioned to access this data. As there was sometimes multiple actions happening every time a user selected an option, I used a reducer. This allowed me to solve the complex state management with easy to follow actions.
-```
+
+```javascript
 const SubscriptionContext = createContext({
   subscription: {},
   nextStep: null,

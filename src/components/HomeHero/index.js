@@ -19,13 +19,12 @@ function HomeHero() {
             Hello - I'm Cian.
           </Heading>
           <Paragraph color="blueBayoux">
-            I am a digital designer based in Dublin, Ireland with a varied range
-            of design skills and expertise.
+            I am a digital designer based in Dublin, Ireland with a keen
+            interest in web design and development.
           </Paragraph>
           <Paragraph color="blueBayoux">
-            I have a strong passion for creating beautiful and enticing
-            front-end designs and bringing them to life with the latest
-            technologies.
+            I currently work as a Digital Designer for CurrencyFair, an online
+            global money exchange company.
           </Paragraph>
           <S.Buttons>
             <Button variation="primary" as="a" href="/portfolio">
