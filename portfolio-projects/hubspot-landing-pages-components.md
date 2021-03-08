@@ -2,8 +2,8 @@
 category: "Coding"
 carousel: true
 carouselImages: [
-  {src: "/images/github-jobs-api/github-jobs-api_home.jpg", alt: "Home page of the GitHub jobs listing"},
-  {src: "/images/github-jobs-api/github-jobs-api_job-listing.jpg", alt: "Page for the selected job"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_editable.jpg", alt: "Home page of the GitHub jobs listing"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_display.jpg", alt: "Page for the selected job"},
 ]
 description: "Responsible for designing and building HubSpot components to be used in landing pages for marketing campaigns,
              using HTML, CSS, JavaScript and HubL - HubSpots own templating language. Components were designed with reusability
@@ -17,7 +17,7 @@ title: "Designed and built HubSpot landing pages and components"
 
 ### Code snippets
 
-#### useFetchJobs custom hook
+#### Using HubL to create reusable components
 
 ```
 <section class="suggested-blogs suggested-blogs--{{module.module_styling.background_colour}} {{module.module_styling.borders}}">
@@ -51,7 +51,9 @@ title: "Designed and built HubSpot landing pages and components"
 
 --- 
 
-### Building a custom audio player with vanilla JavaScript
+#### Building a custom audio player with vanilla JavaScript
+![The custom audio player built for a podcast landing page, with a waveform created using Wavesurfer.js](/images/hubspot-landing-pages-components/hubspot-lp-components_podcast.jpg)
+Figuring out how to create this interactive component was a fun challenge. As the subscription was shared across multiple components - the subscription selection, step list and modal - I created a  provider with a useSubscription hook that allowed the components mentioned to access this data. As there was sometimes multiple actions happening every time a user selected an option, I used a reducer. This allowed me to solve the complex state management with easy to follow actions.
 
 ```
 // Defining selectors
@@ -174,4 +176,64 @@ function showAudio() {
 popupClose.addEventListener("click", () => {
   popup.remove();
 })
+```
+
+--- 
+
+#### Title
+```
+{% if module.module_styling.background_colour == 'background-charcoal' or module.module_styling.background_colour == 'background-gradient' %}
+{% set titleColour = "light" %}
+{% else %}
+{% set titleColour = "dark" %}
+{% endif %}
+
+<div class="hero-banner {{module.module_styling.background_colour}} hero-banner--{{module.theme}} {{module.borders}}">
+  <div class="hero-banner__wrapper">
+    <div class="hero-banner__content">
+      <div class="hero-banner__column">
+        {% if module.text_content.has_logo == 'yes' %}
+        <div class="hero-banner__logo-container hero-banner__logo-container--mobile">
+            <img src="{{module.text_content.company_logo.src}}" alt="{{module.text_content.company_logo.alt}}" class="hero-banner__logo">
+          </div>
+        {% endif %}
+        {% if module.text_content.tagline %}
+        <span class="hero-banner__tagline hero-banner__tagline--{{titleColour}}">{{module.text_content.tagline}}</span>
+        {% endif %}
+        <h1 class="hero-banner__title hero-banner__title--{{module.text_content.heading_text_colour}}">{{module.text_content.page_title}}</h1>
+        {% if module.text_content.has_text_below_title == 'yes' %}
+          <div class="hero-banner__text richtext-container 
+                      richtext-container--check-margin 
+                      richtext-container--{{module.theme}} 
+                      {{module.text_content.check_mark_colour}} 
+                      {{module.text_content.check_mark_type}} 
+                      {{module.text_content.text_colour}}"
+               >
+            {{module.text_content.text_below_heading}}
+          </div>
+        {% endif %}
+        <div class="hero-banner__cta">
+        {% if module.text_content.has_cta == 'yes' %}
+          {% if module.text_content.cta_group.link_type == 'external' %}
+            <a href="{{module.text_content.cta_group.external_link.url.href}}"
+          {% if module.text_content.cta_group.external_link.open_in_new_tab %} target="_blank" {% endif %}
+          {% if module.text_content.cta_group.external_link.no_follow %} rel="nofollow" {% endif %}
+            class="btn btn--green">{{module.text_content.cta_group.cta_text}}</a>
+          {% elif module.text_content.cta_group.link_type == 'internal' %}
+            <a href="#{{module.text_content.cta_group.section_id_hook}}" class="btn btn--green">{{module.text_content.cta_group.cta_text}}</a>
+          {% endif %}
+        {% endif %}
+        {% if module.text_content.has_logo == 'yes' %}
+          <div class="hero-banner__logo-container hero-banner__logo-container--desktop">
+            <img src="{{module.text_content.company_logo.src}}" alt="{{module.text_content.company_logo.alt}}" class="hero-banner__logo">
+          </div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="hero-banner__image">
+      <img src="{{ module.image.hero_image.src}}" alt="{{module.image.hero_image.src}}" class="hero-banner__img">
+    </div>
+  </div>
+</div>
 ```

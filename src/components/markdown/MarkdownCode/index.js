@@ -23,6 +23,7 @@ const MarkdownCode = ({ children }) => {
   return (
     <S.Wrapper>
       <Button
+        alignSelf="flex-start"
         handleButtonClick={handleCodeToggle}
         as="button"
         variation="primary"

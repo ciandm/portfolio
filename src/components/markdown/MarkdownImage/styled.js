@@ -2,15 +2,11 @@ import styled from 'styled-components';
 import { Body } from '../../../theme/typography';
 
 export const Figure = styled.figure`
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  margin: 3.6rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2.4rem 0;
   position: relative;
   width: 100%;
-
-  &:hover figcaption {
-    opacity: 0;
-    pointer-events: none;
-  }
 `;
 
 export const Image = styled.img`
@@ -20,27 +16,11 @@ export const Image = styled.img`
 
 export const Caption = styled.figcaption`
   ${Body};
-  bottom: 0;
-  color: ${({ theme }) => theme.colors.primary.white};
+  color: ${({ theme }) => theme.colors.secondary.blueBayoux};
+  font-size: 1.4rem;
   font-weight: 500;
-  padding: 1.2rem;
-  position: absolute;
+  padding: 1.2rem 0;
   transition: opacity 0.25s ease-in-out;
   width: 100%;
   z-index: 1;
-
-  &::before {
-    background: linear-gradient(
-      hsla(213, 80%, 12%, 0),
-      hsla(213, 80%, 12%, 0.8)
-    );
-    bottom: 0;
-    content: '';
-    display: block;
-    height: calc(100% + 6rem);
-    left: 0;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
 `;

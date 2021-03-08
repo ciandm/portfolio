@@ -22,6 +22,7 @@ const theme = {
       royalBlue: 'hsl(252, 80%, 61%)',
       selago: 'hsl(251, 81%, 92%)',
       tanHide: 'hsl(18, 92%, 66%)',
+      toryBlue: 'hsl(213, 80%, 55%)',
     },
   },
   constants: {

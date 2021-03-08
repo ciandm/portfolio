@@ -16,7 +16,7 @@ function HomeHero() {
       <S.Wrapper>
         <S.Content>
           <Heading type="h1" color="blackPearl">
-            Hello - I'm Cian.
+            Hello - I'm Cian
           </Heading>
           <Paragraph color="blueBayoux">
             I am a digital designer based in Dublin, Ireland with a keen

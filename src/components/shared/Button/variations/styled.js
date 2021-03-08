@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   align-self: center;
+  border: none;
   font-size: 1.6rem;
   font-weight: 500;
   font-family: inherit;
@@ -19,16 +20,13 @@ export const Button = styled.button`
 export const ButtonPrimary = styled(Button)`
   align-self: ${({ alignSelf }) => alignSelf || null};
   background-color: ${({ theme }) => theme.colors.primary.denim};
-  border: 1px solid transparent;
   border-radius: 1.2rem;
   color: ${({ theme }) => theme.colors.primary.white};
   padding: 1.2rem 2.4rem;
 
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
-    background-color: transparent;
-    border-color: ${({ theme }) => theme.colors.primary.denim};
-    color: ${({ theme }) => theme.colors.primary.denim};
+    background-color: ${({ theme }) => theme.colors.tertiary.toryBlue};
   }
 
   &:disabled {
@@ -40,7 +38,6 @@ export const ButtonPrimary = styled(Button)`
 export const ButtonSecondary = styled(Button)`
   align-items: center;
   background-color: transparent;
-  border: none;
   border-radius: 0.6rem;
   display: flex;
   color: ${({ theme }) => theme.colors.primary.denim};
