@@ -8,10 +8,9 @@ carouselImages: [
 description: "Responsible for designing and building HubSpot components to be used in landing pages for marketing campaigns,
              using HTML, CSS, JavaScript and HubL - HubSpots own templating language. Components were designed with reusability
              and customisability in mind, allowing the content creators freedom to use them throughout multiple pages."
-image: "/images/github-jobs-api/github-jobs-api_thumbnail.jpg"
-imageAlt: "Designed and built HubSpot landing pages and components"
 strapline: "HTML, CSS & JS"
 tech: ["HTML", "CSS", "JavaScript", "HubL"]
+thumbnail: "/images/github-jobs-api/github-jobs-api_thumbnail.jpg"
 title: "Designed and built HubSpot landing pages and components"
 ---
 

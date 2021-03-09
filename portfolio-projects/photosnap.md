@@ -10,8 +10,6 @@ description: [
   "Using designs from www.frontendmentor.io to build a website for a fictional landing page, for a platform called Photosnap, which makes it easy to share for photographers to share their photos and connect with others. It included the strong use of imagery throughout, with a full-width design implemented that really helps showcase images.",
   "Please note - as this is a fictional website some links may not work properly."
 ]
-image: "/images/photosnap/photosnap_thumbnail.jpg"
-imageAlt: "Responsive Photosnap website"
 links: [
   {
     github: true,
@@ -25,6 +23,7 @@ links: [
 ]
 strapline: "React & SCSS"
 tech: ["React", "SCSS"]
+thumbnail: "/images/photosnap/photosnap_thumbnail.jpg"
 title: "Responsive Photosnap website"
 ---
 

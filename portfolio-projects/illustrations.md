@@ -8,10 +8,9 @@ carouselImages: [
   {src: "/images/illustrations/illustrations_four.jpg", alt: "Placeholder"}
   ]
 description: "Designed unique and branded illustrations for CurrencyFair to be used throughout the product."
-image: "/images/illustrations/illustrations_thumbnail.jpg"
-imageAlt: "Placeholder"
 strapline: "Branding"
 tech: ["Illustrator"]
+thumbnail: "/images/illustrations/illustrations_thumbnail.jpg"
 title: "Created bespoke illustrations for CurrencyFair"
 ---
 

@@ -10,8 +10,6 @@ description: [
   "I built a website for a fictional design agency called Designo using React and Styled Components, with a LeafletJS integration for displaying addressed on maps.",
   "Please note - as this is a fictional website some links may not work properly."
 ]
-image: "/images/designo/designo_thumbnail.jpg"
-imageAlt: "Designo website with LeafletJS integration"
 links: [
   {
     github: true,
@@ -25,6 +23,7 @@ links: [
 ]
 strapline: "React & Styled Components"
 tech: ["React", "Styled Components", "LeafletJS"]
+thumbnail: "/images/designo/designo_thumbnail.jpg"
 title: "Designo website with LeafletJS integration"
 ---
 

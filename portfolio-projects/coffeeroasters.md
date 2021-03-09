@@ -22,6 +22,7 @@ links: [
 ]
 strapline: "React & Styled Components"
 tech: ["React", "Styled Components"]
+thumbnail: "/images/coffeeroasters/coffeeroasters_thumbnail.jpg"
 title: "Coffeeroasters website with interactive subscription selection"
 ---
 

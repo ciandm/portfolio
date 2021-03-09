@@ -5,7 +5,7 @@ import Strapline from '../../shared/Typography/Strapline';
 import Heading from '../../shared/Typography/Heading';
 import Button from '../../shared/Button';
 
-function Project({ slug, strapline, title, image, imageAlt }) {
+function Project({ slug, strapline, title, thumbnail }) {
   return (
     <S.Project href={`/portfolio/${slug}`}>
       <S.Header>
@@ -15,7 +15,7 @@ function Project({ slug, strapline, title, image, imageAlt }) {
         </Heading>
       </S.Header>
       <S.ImageContainer>
-        <ProjectImage src={image} alt={imageAlt} />
+        <ProjectImage src={thumbnail} alt={title} />
       </S.ImageContainer>
       <S.Footer>
         <S.Date>2020</S.Date>

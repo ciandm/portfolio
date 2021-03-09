@@ -6,8 +6,6 @@ carouselImages: [
   {src: "/images/reg-page/reg-page_personal-mobile.jpg", alt: "Personal version of the registration page on mobile"},
 ]
 description: "Redesigned the registration page for CurrencyFair to improve UX and improve conversions for business accounts after feedback that they were accidentally signing up for a personal account."
-image: "/images/reg-page/reg-page_thumbnail.jpg"
-imageAlt: "Redesigned the CurrencyFair registration page"
 links: [
   {
     href: "https://app.currencyfair.com/register/personal",
@@ -16,6 +14,7 @@ links: [
 ]
 strapline: "Web Design"
 tech: ["Figma", "Usability Hub"]
+thumbnail: "/images/reg-page/reg-page_thumbnail.jpg"
 title: "Redesigned the CurrencyFair registration page"
 ---
 

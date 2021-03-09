@@ -8,8 +8,6 @@ carouselImages: [
   {src: "/images/personal-brochure/personal-brochure_rate-alerts.jpg", alt: "An example of the redesigned rate alerts page"},
 ]
 description: "As CurrencyFair began to migrate away from WordPress and implement React across the brochure site, I was tasked with redesigning the brochure site for CurrencyFair’s personal offering."
-image: "/images/personal-brochure/personal-brochure_thumbnail.jpg"
-imageAlt: "CurrencyFair Business brochure site redesign"
 links: [
   {
     href: "https://www.currencyfair.com",
@@ -18,6 +16,7 @@ links: [
 ]
 strapline: "Web Design"
 tech: ["Figma"]
+thumbnail: "/images/personal-brochure/personal-brochure_thumbnail.jpg"
 title: "Redesigned CurrencyFair personal brochure site"
 ---
 

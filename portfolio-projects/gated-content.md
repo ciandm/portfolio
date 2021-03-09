@@ -8,10 +8,9 @@ carouselImages: [
   {src: "/images/gated-content/gated-content_landing-page.jpg", alt: "Landing page design for gated content offers"},
 ]
 description: "Responsible for designing gated content in the form of e-books and e-guides, and ensuring consistency in look and feel across different offers as well as building out landing pages to host the content offers on."
-image: "/images/gated-content/gated-content_thumbnail.jpg"
-imageAlt: "E-Book design for gated content offers"
 strapline: "Design & Web Design"
 tech: ["Figma"]
+thumbnail: "/images/gated-content/gated-content_thumbnail.jpg"
 title: "E-Book design for gated content offers"
 ---
 

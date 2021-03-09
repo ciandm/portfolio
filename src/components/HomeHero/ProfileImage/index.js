@@ -8,6 +8,7 @@ const ProfileImage = () => {
       alt="My profile picture"
       layout="fill"
       objectFit="cover"
+      priority
     />
   );
 };

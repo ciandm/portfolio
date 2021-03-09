@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Skill = styled.div`
   display: grid;
   gap: 1.2rem;
+  grid-template-rows: min-content;
 
   & h4 {
     position: relative;

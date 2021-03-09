@@ -45,14 +45,14 @@ function Skills() {
             iconBackground="cherub"
             iconColour="redViolet"
             heading="Web Design"
-            paragraph="I love creating beautiful and responsive websites, and enjoy collaborating with team members to bring designs to the next level."
+            paragraph="Passionate about creating responsive websites, and enjoy collaborating with team members to take designs to the next level."
           />
           <Skill
             icon={<AiOutlineCode />}
             iconBackground="selago"
             iconColour="royalBlue"
             heading="Web Development"
-            paragraph="I love to bring designs to life with  a strong understanding of HTML, CSS & JavaScript. I also enjoy using React to build web pages."
+            paragraph="A strong understanding of front-end languages to code and build web pages by hand after designing, including React."
           />
           <Skill
             icon={<MdSlowMotionVideo />}
