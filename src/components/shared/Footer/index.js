@@ -1,13 +1,14 @@
 import React from 'react';
 import * as S from './styled';
 import useWindowSize from '../../../hooks/useWindowSize';
+import Logo from '../Logo';
 
 const Footer = () => {
   const isTablet = useWindowSize() > 767;
   return (
     <S.Footer>
       <S.FooterWrapper>
-        <S.FooterLogo />
+        <Logo />
         {isTablet && (
           <S.FooterNote>Website designed and built by me 🐬</S.FooterNote>
         )}

@@ -16,12 +16,6 @@ export const NavWrapper = styled.div`
   max-width: ${({ theme }) => theme.constants.maxWidth};
 `;
 
-export const LogoContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary.denim};
-  height: 3.2rem;
-  width: 7.2rem;
-`;
-
 export const Menu = styled.button`
   align-items: center;
   background-color: transparent;

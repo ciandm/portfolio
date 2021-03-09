@@ -9,9 +9,9 @@ import {
 // Next imports
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-//
 import * as S from './styled';
 import useWindowSize from '../../../hooks/useWindowSize';
+import Logo from '../Logo';
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -33,7 +33,7 @@ function Nav() {
   return (
     <S.Nav>
       <S.NavWrapper>
-        <S.LogoContainer />
+        <Logo />
         {isMobile ? (
           <S.Menu onClick={() => setOpen(prevOpen => !prevOpen)}>
             {open ? <MdClose /> : <MdMenu />}
