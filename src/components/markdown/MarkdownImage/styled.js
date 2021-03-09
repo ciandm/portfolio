@@ -9,7 +9,14 @@ export const Figure = styled.figure`
   width: 100%;
 `;
 
+export const ImageWrapper = styled.div`
+  display: flex;
+  height: auto;
+  position: relative;
+`;
+
 export const Image = styled.img`
+  height: auto;
   object-fit: cover;
   width: 100%;
 `;

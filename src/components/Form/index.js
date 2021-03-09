@@ -7,16 +7,27 @@ import Button from '../shared/Button';
 import FormSubmission from './FormSubmission';
 
 function Form({ submitted, handleFormSubmission }) {
+  // to be sent when submitted
   const [inputs, setInputs] = useState({
+    accessKey: '456bd9b2-f931-44f2-9ba9-2d5d4ae2798f',
     email: '',
     message: '',
     name: '',
+    subject: 'Form submission',
   });
+
+  // flag for whenever form is asynchronously submitting
+  const [submitting, setSubmitting] = useState(false);
 
   const [errors, setErrors] = useState({
     email: null,
     message: null,
     name: null,
+  });
+
+  const [submitError, setSubmitError] = useState({
+    message: '',
+    type: '',
   });
 
   const updateErrors = (name, value) => {
@@ -31,8 +42,8 @@ function Form({ submitted, handleFormSubmission }) {
     updateErrors(e.target.name, false);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = async event => {
+    event.preventDefault();
     let formValid = true;
     // check inputs for errors
     if (inputs.email === '') {
@@ -49,7 +60,32 @@ function Form({ submitted, handleFormSubmission }) {
     }
 
     if (formValid) {
-      handleFormSubmission();
+      try {
+        setSubmitting(true);
+        const res = await fetch('https://api.staticforms.xyz/submit', {
+          body: JSON.stringify(inputs),
+          headers: { 'Content-Type': 'application/json' },
+          method: 'POST',
+        });
+
+        const json = await res.json();
+
+        if (json.success) {
+          handleFormSubmission();
+        } else {
+          setSubmitting(false);
+          setSubmitError({
+            message: json.message,
+            type: 'error',
+          });
+        }
+      } catch (e) {
+        setSubmitting(false);
+        setSubmitError({
+          message: e,
+          type: e,
+        });
+      }
     }
   };
 
@@ -63,7 +99,16 @@ function Form({ submitted, handleFormSubmission }) {
           {submitted ? (
             <FormSubmission />
           ) : (
-            <S.Form onSubmit={e => handleSubmit(e)}>
+            <S.Form
+              action="https://api.staticforms.xyz/submit"
+              method="POST"
+              onSubmit={e => handleSubmit(e)}
+            >
+              <input
+                type="hidden"
+                name="accessKey"
+                value="456bd9b2-f931-44f2-9ba9-2d5d4ae2798f"
+              />
               <Input
                 error={errors.name}
                 handleInputChange={handleInputChange}
@@ -92,8 +137,9 @@ function Form({ submitted, handleFormSubmission }) {
                 value={inputs.message}
               />
               <Button alignSelf="stretch" as="button" type="submit">
-                Send message
+                {submitting ? 'Sending...' : 'Send message'}
               </Button>
+              {submitError && <S.Error>{submitError.message}</S.Error>}
             </S.Form>
           )}
         </S.Container>

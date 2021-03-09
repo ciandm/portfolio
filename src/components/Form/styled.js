@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Body } from '../../theme/typography';
 
 export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.secondary.linkWater};
@@ -84,4 +85,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   padding-top: 3.6rem;
+`;
+
+export const Error = styled.p`
+  ${Body};
+  color: ${({ theme }) => theme.colors.tertiary.redViolet};
+  margin: 1.2rem 0;
+  text-align: center;
 `;

@@ -4,7 +4,7 @@ import * as S from './styled';
 const MarkdownImage = ({ src, alt }) => {
   return (
     <S.Figure>
-      <S.Image src={src} alt={alt} />
+      <S.Image src={src} alt={alt} width={800} height={300} />
       <S.Caption>{alt}</S.Caption>
     </S.Figure>
   );
