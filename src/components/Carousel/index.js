@@ -32,7 +32,6 @@ function Carousel({ carouselImages }) {
     ),
     dots: true,
     infinite: true,
-    lazyLoad: true,
     nextArrow: <SlideArrow type="right" nextSlideHandler={nextSlideHandler} />,
     prevArrow: <SlideArrow type="left" prevSlideHandler={prevSlideHandler} />,
     slidesToScroll: 1,
