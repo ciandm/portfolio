@@ -31,17 +31,12 @@ export const Footer = styled.footer`
 export const FooterWrapper = styled.div`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: ${({ theme }) => theme.constants.maxWidth};
   text-align: center;
   width: 100%;
   z-index: 1;
-`;
-
-export const FooterLogo = styled.div`
-  background-color: white;
-  width: 7.2rem;
-  height: 3.6rem;
 `;
 
 export const FooterNote = styled.p`

@@ -52,7 +52,7 @@ function Skills() {
             iconBackground="selago"
             iconColour="royalBlue"
             heading="Web Development"
-            paragraph="A strong understanding of front-end languages to code and build web pages by hand after designing, including React."
+            paragraph="A strong understanding of front-end languages to code and build web pages from scratch, including with React."
           />
           <Skill
             icon={<MdSlowMotionVideo />}

@@ -11,7 +11,7 @@ const Logo = () => {
             src="/images/portfolio-logo.svg"
             alt="Cian Dolphin logo"
             height={16}
-            width={200}
+            width={120}
           />
         </a>
       </Link>
