@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import * as S from './styled';
+import 'keen-slider/keen-slider.min.css';
 
 const CarouselImage = ({ imageSrc, alt }) => {
   return (
-    <S.ImageContainer>
+    <S.ImageContainer className="keen-slider__slide">
       <Image
         src={imageSrc}
         alt={alt}

@@ -1,21 +1,27 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import Slider from 'react-slick';
 import { useKeenSlider } from 'keen-slider/react';
 import Container from './Container';
 import CarouselImage from './CarouselImage';
 import * as S from './styled';
-import 'keen-slider/keen-slider.min.css';
+import SlideArrow from './SlideArrow';
 
 function Carousel({ carouselImages }) {
-  const [sliderRef, slider] = useKeenSlider();
+  const [sliderRef, slider] = useKeenSlider({
+    loop: true,
+  });
 
   return (
     <Container>
-      <S.Carousel ref={sliderRef}>
-        {carouselImages.map((image, index) => (
-          <CarouselImage key={index} {...image} />
+      <S.Carousel ref={sliderRef} className="keen-slider">
+        {carouselImages.map(image => (
+          <CarouselImage key={image.src} imageSrc={image.src} alt={image.alt} />
         ))}
+        {
+          slider && (
+            <
+          )
+        }
       </S.Carousel>
     </Container>
   );
