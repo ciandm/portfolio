@@ -1,51 +1,22 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import { useKeenSlider } from 'keen-slider/react';
 import Container from './Container';
 import CarouselImage from './CarouselImage';
-import Paging, { PagingItem } from './Paging';
-import SlideArrow from './SlideArrow/index';
+import * as S from './styled';
+import 'keen-slider/keen-slider.min.css';
 
 function Carousel({ carouselImages }) {
-  const customSlider = useRef();
-
-  const nextSlideHandler = () => {
-    customSlider.current.slickNext();
-  };
-
-  const prevSlideHandler = () => {
-    customSlider.current.slickPrev();
-  };
-
-  // needs a ref to use method
-  const goToSlideHandler = i => {
-    customSlider.current.slickGoTo(i);
-  };
-
-  const settings = {
-    appendDots: dots => <Paging dots={dots} />,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: 'ease-in-out',
-    customPaging: i => (
-      <PagingItem index={i} goToSlideHandler={goToSlideHandler} />
-    ),
-    dots: true,
-    infinite: true,
-    nextArrow: <SlideArrow type="right" nextSlideHandler={nextSlideHandler} />,
-    prevArrow: <SlideArrow type="left" prevSlideHandler={prevSlideHandler} />,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    speed: 500,
-  };
+  const [sliderRef, slider] = useKeenSlider();
 
   return (
     <Container>
-      <Slider {...settings} ref={customSlider}>
-        {carouselImages.map(image => (
-          <CarouselImage key={image.src} imageSrc={image.src} alt={image.alt} />
+      <S.Carousel ref={sliderRef}>
+        {carouselImages.map((image, index) => (
+          <CarouselImage key={index} {...image} />
         ))}
-      </Slider>
+      </S.Carousel>
     </Container>
   );
 }
