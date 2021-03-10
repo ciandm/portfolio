@@ -22,7 +22,6 @@
     "remark-parse": "^9.0.0",
     "remark-react": "^8.0.0",
     "remark-unwrap-images": "^2.0.0",
-    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
     "unified": "^9.2.0"
   },

@@ -14,7 +14,7 @@ function SlideArrow({ type, prevSlideHandler, nextSlideHandler }) {
 
 const PrevArrow = ({ prevSlideHandler }) => {
   return (
-    <S.PrevArrow onClick={() => prevSlideHandler()}>
+    <S.PrevArrow onClick={prevSlideHandler}>
       <MdKeyboardArrowLeft />
     </S.PrevArrow>
   );
@@ -22,7 +22,7 @@ const PrevArrow = ({ prevSlideHandler }) => {
 
 const NextArrow = ({ nextSlideHandler }) => {
   return (
-    <S.NextArrow onClick={() => nextSlideHandler()}>
+    <S.NextArrow onClick={nextSlideHandler}>
       <MdKeyboardArrowRight />
     </S.NextArrow>
   );

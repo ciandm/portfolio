@@ -12,7 +12,8 @@ export const PagingItem = styled.button`
   width: 6rem;
 
   &::before {
-    background-color: ${({ theme }) => theme.colors.secondary.frenchPass};
+    background-color: ${({ theme, active }) =>
+      active ? theme.colors.primary.denim : theme.colors.secondary.frenchPass};
     content: '';
     display: block;
     height: 0.6rem;
@@ -25,17 +26,13 @@ export const PagingItem = styled.button`
   }
 `;
 
-export const Paging = styled.ul`
+export const Paging = styled.div`
   display: flex;
   justify-content: center;
   list-style: none;
   padding-top: 3.6rem;
 
-  & li.slick-active ${PagingItem}::before {
-    background-color: ${({ theme }) => theme.colors.primary.denim};
-  }
-
-  & li + li {
+  & button + button {
     padding-left: 0.8rem;
   }
 `;

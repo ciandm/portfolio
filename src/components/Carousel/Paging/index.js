@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from './styled';
 
-const Paging = ({ dots }) => {
-  return <S.Paging>{dots}</S.Paging>;
+const Paging = ({ children }) => {
+  return <S.Paging className="dots">{children}</S.Paging>;
 };
 
-const PagingItem = ({ index, goToSlideHandler }) => {
-  return <S.PagingItem onClick={() => goToSlideHandler(index)} />;
+const PagingItem = ({ goToSlideHandler, active }) => {
+  return <S.PagingItem active={active} onClick={goToSlideHandler} />;
 };
 
 export default Paging;
