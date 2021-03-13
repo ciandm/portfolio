@@ -31,7 +31,7 @@ title: "Designo website with LeafletJS integration"
 ### Code snippets
 
 #### Reusable pattern background
-Across multiple pages was a repeatable leaf pattern with different position and rotation for each pages. Rather than create this multiple times on each section, I extracted it into its own component and used props to position it, after determining the position through Figma
+Across multiple pages was a repeatable leaf pattern with different position and rotation for each pages. Rather than create this multiple times on each section, I **extracted it into its own component and used props to position it**, after determining the position through Figma
 
 ```javascript
 const LeafPattern = ({

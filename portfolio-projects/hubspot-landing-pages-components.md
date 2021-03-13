@@ -21,6 +21,8 @@ title: "Designed and built HubSpot landing pages and components"
 
 #### Using HubL to create reusable components
 
+HubL is HubSpot's extension of Jinjava, a templating engine based on Jinja. It is a powerful language that allowed me to **build reusable modules that could be placed on landing pages using HubSpot's drag and drop interface** by the content creators. In the content editor, the end user could input the content which could be accessed through the `{{ module.parameter }}` syntax. This gave the editor freedom to place content however they liked, and allowed them to style the modules to fit the page and surrounding modules and meant modules were very easy to reuse.
+
 ```html
 <section class="suggested-blogs suggested-blogs--{{module.module_styling.background_colour}} {{module.module_styling.borders}}">
   <div class="suggested-blogs__wrapper suggested-blogs__wrapper--{{module.theme}}">
