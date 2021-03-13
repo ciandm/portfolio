@@ -44,7 +44,7 @@ function Skills() {
             icon={<RiDragDropLine />}
             iconBackground="cherub"
             iconColour="redViolet"
-            heading="Web Design"
+            heading="Web and UI Design"
             paragraph="Passionate about creating responsive websites, and enjoy collaborating with team members to take designs to the next level."
           />
           <Skill
@@ -64,7 +64,7 @@ function Skills() {
         </S.SkillsGrid>
         <S.Buttons>
           <Button variation="primary" as="a" href="/portfolio">
-            View my portfolio
+            See some of my work
           </Button>
           <Button variation="secondary" as="a" href="/contact">
             Get in touch

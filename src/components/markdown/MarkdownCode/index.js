@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightBlue } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
@@ -53,3 +54,8 @@ const MarkdownCode = ({ language, value }) => {
 };
 
 export default MarkdownCode;
+
+MarkdownCode.propTypes = {
+  language: PropTypes.oneOf(['javascript', 'HTML']).isRequired,
+  value: PropTypes.node.isRequired,
+};

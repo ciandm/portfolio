@@ -24,6 +24,10 @@ export default function Home({ projects }) {
       <Head>
         <title>Home | Cian Dolphin-Murray</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="I am a digital designer based in Dublin, Ireland with a keen interest in web design and development. I’ve had exposure to multiple unique areas of digital design and development in my career, and I am always eager to learn and improve my skills while delivering results."
+        />
         <meta charSet="utf-8" />
       </Head>
       <HomeHero />

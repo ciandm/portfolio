@@ -14,7 +14,11 @@ const Footer = () => {
         )}
         <S.FooterLinks>
           <S.FooterItem>
-            <S.FooterLink href="https://github.com/ciandm" target="_blank">
+            <S.FooterLink
+              href="https://github.com/ciandm"
+              target="_blank"
+              rel="noopener"
+            >
               Github
             </S.FooterLink>
           </S.FooterItem>
@@ -22,6 +26,7 @@ const Footer = () => {
             <S.FooterLink
               href="https://www.linkedin.com/in/cian-dolphin-murray-92b05712a/"
               target="_blank"
+              rel="noopener"
             >
               LinkedIn
             </S.FooterLink>

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const ToggleContainer = styled.div`
+  align-items: center;
   background-color: ${({ theme }) => theme.colors.secondary.periwinkle};
   border-radius: 4.8rem;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.03);
   display: grid;
   grid-template-columns: 15rem 15rem;
   margin-bottom: 6rem;
+  padding: 0.6rem;
   position: relative;
 `;
 
@@ -14,11 +16,11 @@ export const Slide = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.denim};
   border-radius: 4.8rem;
   box-shadow: 0px 4px 16px rgba(9, 119, 200, 0.36);
-  height: 100%;
-  left: 0;
+  height: calc(100% - 1.2rem);
+  left: 0.6rem;
   position: absolute;
   transform: ${({ active }) =>
-    active === 'Design' ? 'translateX(0)' : 'translateX(100%)'};
+    active === 'Design' ? 'translateX(0)' : 'translateX(calc(100% - 1.2rem))'};
   transition: transform 0.25s ease-in-out;
   width: 50%;
 `;

@@ -32,7 +32,7 @@ title: "Responsive Photosnap website"
 #### Responsive images
 As the design was supplied with different image sizes for each device, I had to create a responsive image component that allowed me to use all of them and let the browser determine which image to show.
 
-```
+```javascript
 const ResponsiveImage = ({
   images,
   alt,
@@ -65,7 +65,7 @@ ResponsiveImage.propTypes = {
 #### Plan comparison
 For the plan comparison, there is a significant change moving from mobile to tablet in terms of the design. The table headers were hidden and placed along each row, which required some forward planning when laying out the HTML markup. 
 
-```
+```javascript
 function PlanComparison({
   comparison
 }) {
