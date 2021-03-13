@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import {
-  shadesOfPurple,
-  atomOneDark,
-  tomorrowNightBlue,
-  kimbieDark,
-  dracula,
-} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-
+import { tomorrowNightBlue } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
 import Button from '../../shared/Button';
 import * as S from './styled';
 
@@ -32,7 +26,8 @@ const MarkdownCode = ({ language, value }) => {
         alignSelf="flex-start"
         handleButtonClick={handleCodeToggle}
         as="button"
-        variation="primary"
+        variation="secondary"
+        icon={open ? <MdVisibilityOff /> : <MdVisibility />}
       >
         {open ? 'Hide code' : 'Show code'}
       </Button>
@@ -46,7 +41,7 @@ const MarkdownCode = ({ language, value }) => {
           <S.Language>JS</S.Language>
         </S.MenuBar>
         <SyntaxHighlighter
-          style={shadesOfPurple}
+          style={tomorrowNightBlue}
           language={language}
           customStyle={customStyling}
         >

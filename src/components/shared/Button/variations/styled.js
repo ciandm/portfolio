@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  align-self: center;
+  align-self: ${({ alignSelf }) => alignSelf || null};
   border: none;
   font-size: 1.6rem;
   font-weight: 500;

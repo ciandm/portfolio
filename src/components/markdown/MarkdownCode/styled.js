@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3.6rem;
+
+  & button {
+    margin-left: -0.8rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -41,7 +45,7 @@ export const Container = styled.div`
 
 export const MenuBar = styled.div`
   align-items: center;
-  background-color: hsl(213, 80%, 8%);
+  background-color: hsl(213, 80%, 6%);
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -71,7 +75,7 @@ export const Dot = styled.div`
 
 export const Language = styled.span`
   ${SmallCaps};
-  background-color: ${({ theme }) => theme.colors.primary.denim};
+  background-color: ${({ theme }) => theme.colors.primary.blackPearl};
   border-radius: 2rem;
   color: ${({ theme }) => theme.colors.primary.white};
   padding: 0.4rem 1.2rem;
