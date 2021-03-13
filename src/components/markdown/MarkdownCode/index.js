@@ -38,7 +38,7 @@ const MarkdownCode = ({ language, value }) => {
             <S.Dot color="orange" />
             <S.Dot color="green" />
           </S.Dots>
-          <S.Language>JS</S.Language>
+          <S.Language>{language === 'javascript' ? 'JS' : language}</S.Language>
         </S.MenuBar>
         <SyntaxHighlighter
           style={tomorrowNightBlue}

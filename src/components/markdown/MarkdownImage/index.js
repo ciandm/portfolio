@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as S from './styled';
 
 const MarkdownImage = ({ src, alt }) => {
@@ -11,3 +12,8 @@ const MarkdownImage = ({ src, alt }) => {
 };
 
 export default MarkdownImage;
+
+MarkdownImage.propTypes = {
+  alt: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+};

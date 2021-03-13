@@ -63,7 +63,7 @@ const LeafPattern = ({
 #### Window size hook for a responsive nav
 For the plan comparison, there is a significant change moving from mobile to tablet in terms of the design. The table headers were hidden and placed along each row, which required some forward planning when laying out the HTML markup. 
 
-```
+```javascript
 function Nav() {
 
   const [open, setOpen] = useState(false);

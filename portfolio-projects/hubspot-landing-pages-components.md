@@ -182,7 +182,7 @@ popupClose.addEventListener("click", () => {
 --- 
 
 #### Title
-```
+```HTML
 {% if module.module_styling.background_colour == 'background-charcoal' or module.module_styling.background_colour == 'background-gradient' %}
 {% set titleColour = "light" %}
 {% else %}

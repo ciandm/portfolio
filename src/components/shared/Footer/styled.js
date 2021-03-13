@@ -13,12 +13,8 @@ export const Footer = styled.footer`
     padding: 2.4rem;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.desktop} {
-    padding: 3.6rem 0;
-  }
-
   &::before {
-    background-color: hsl(213, 80%, 10%);
+    background-color: hsl(213, 80%, 6%);
     content: '';
     display: block;
     height: 100%;
