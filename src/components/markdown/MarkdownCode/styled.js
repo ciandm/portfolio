@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SmallCaps } from '../../../theme/typography';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -39,11 +40,12 @@ export const Container = styled.div`
 `;
 
 export const MenuBar = styled.div`
+  align-items: center;
   background-color: hsl(213, 80%, 8%);
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem 1.6rem;
+  padding: 1.6rem;
   z-index: 500;
 `;
 
@@ -65,4 +67,12 @@ export const Dot = styled.div`
   & + & {
     margin-left: 0.8rem;
   }
+`;
+
+export const Language = styled.span`
+  ${SmallCaps};
+  background-color: ${({ theme }) => theme.colors.primary.denim};
+  border-radius: 2rem;
+  color: ${({ theme }) => theme.colors.primary.white};
+  padding: 0.4rem 1.2rem;
 `;
