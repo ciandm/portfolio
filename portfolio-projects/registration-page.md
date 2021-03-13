@@ -5,6 +5,7 @@ carouselImages: [
   {src: "/images/reg-page/reg-page_both-screens.jpg", alt: "Both screens for the business registrations"},
   {src: "/images/reg-page/reg-page_personal-mobile.jpg", alt: "Personal version of the registration page on mobile"},
 ]
+date: "2020"
 description: "Redesigned the registration page for CurrencyFair to improve UX and improve conversions for business accounts after feedback that they were accidentally signing up for a personal account."
 links: [
   {
@@ -26,9 +27,9 @@ With something as important as a registration page, **I had to be sure what I wa
 
 One of the main goals for this project was to make this difference much clearer, and to do this I had to test multiple variations of designs on Usability Hub. The question here to the testers was simple - **“Imagine you’re a business owner intending to open an account with CurrencyFair - where would you click next?”**. Over multiple tests with random users selected from around the world, I was able to refine my design for the registration page until I achieved a **100% click rate** on the toggle for creating a business account, something that fell short on the original design with around 60% success rate. With these excellent results, I had the confidence to move forward with the chosen design and fully deliver a new and improved registration page.
 
-![Old flow](/images/image-placeholder.jpg)
+![Heatmap of clicks on the old registration flow](/images/reg-page/reg-page_old-flow.jpg)
 
-![New flow](/images/image-placeholder.jpg)
+![Heatmap of clicks on the new registration flow](/images/reg-page/reg-page_new-flow.jpg)
 
 ### Highlighting the different accounts
 

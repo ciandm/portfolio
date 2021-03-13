@@ -6,6 +6,7 @@ carouselImages: [
   {src: "/images/photosnap/photosnap_mobile.jpg", alt: "Home page of Photosnap"},
   {src: "/images/photosnap/photosnap_stories-features.jpg", alt: "Home page of Photosnap"},
 ]
+date: "2021"
 description: [
   "Using designs from www.frontendmentor.io to build a website for a fictional landing page, for a platform called Photosnap, which makes it easy to share for photographers to share their photos and connect with others. It included the strong use of imagery throughout, with a full-width design implemented that really helps showcase images.",
   "Please note - as this is a fictional website some links may not work properly."

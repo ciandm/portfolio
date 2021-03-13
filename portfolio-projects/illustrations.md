@@ -7,6 +7,7 @@ carouselImages: [
   {src: "/images/illustrations/illustrations_three.jpg", alt: "Placeholder"},
   {src: "/images/illustrations/illustrations_four.jpg", alt: "Placeholder"}
   ]
+date: "2019"
 description: "Designed unique and branded illustrations for CurrencyFair to be used throughout the product."
 strapline: "Branding"
 tech: ["Illustrator"]

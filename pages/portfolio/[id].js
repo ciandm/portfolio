@@ -39,6 +39,7 @@ export default function PortfolioShowcase({ projectData, otherProjects }) {
   return (
     <>
       <Head>
+        <meta name="description" content={projectData.data.description} />
         <title>
           Portfolio | {projectData.data.title} | Cian Dolphin-Murray
         </title>

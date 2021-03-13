@@ -6,6 +6,7 @@ carouselImages: [
   {src: "/images/coffeeroasters/coffeeroasters_home.jpg", alt: "Home page of Photosnap"},
   {src: "/images/coffeeroasters/coffeeroasters_about.jpg", alt: "Home page of Photosnap"},
 ]
+date: "2021"
 description: "A website for a fictional company, Coffeeroasters, detailing who they are and their processes with an interactive subscription selection with multiple options and steps involved to selecting the perfect plan for each customer. Designs from www.frontendmentor.io"
 image: "/images/coffeeroasters/coffeeroasters_thumbnail.jpg"
 imageAlt: "Coffeeroasters website with interactive subscription selection"

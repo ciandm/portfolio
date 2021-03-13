@@ -7,6 +7,7 @@ carouselImages: [
   {src: "/images/personal-brochure/personal-brochure_branding.jpg", alt: "Updated and refreshed branding on the CurrencyFair website"},
   {src: "/images/personal-brochure/personal-brochure_rate-alerts.jpg", alt: "An example of the redesigned rate alerts page"},
 ]
+date: "2020"
 description: "As CurrencyFair began to migrate away from WordPress and implement React across the brochure site, I was tasked with redesigning the brochure site for CurrencyFair’s personal offering."
 links: [
   {

@@ -6,6 +6,7 @@ carouselImages: [
   {src: "/images/designo/designo_mobile.jpg", alt: "Home page of Photosnap"},
   {src: "/images/designo/designo_contact.jpg", alt: "Home page of Photosnap"},
 ]
+date: "2021"
 description: [
   "I built a website for a fictional design agency called Designo using React and Styled Components, with a LeafletJS integration for displaying addressed on maps.",
   "Please note - as this is a fictional website some links may not work properly."

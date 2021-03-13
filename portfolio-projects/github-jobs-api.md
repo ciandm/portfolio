@@ -5,6 +5,7 @@ carouselImages: [
   {src: "/images/github-jobs-api/github-jobs-api_home.jpg", alt: "Home page of the GitHub jobs listing"},
   {src: "/images/github-jobs-api/github-jobs-api_job-listing.jpg", alt: "Page for the selected job"},
 ]
+date: "2021"
 description: "Using the GitHub Jobs API and React, I built out a site that displays a list of jobs currently advertised on GitHub Jobs.
               Included is a fully functional filter, where you can filter by company, title, location, full time or part time and more.
               There is also a dark mode available, which detects the users preference on load, and is easily switchable."

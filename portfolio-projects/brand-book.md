@@ -2,14 +2,15 @@
 category: "Design"
 carousel: true
 carouselImages: [
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"},
-  {src: "/images/image-placeholder.jpg", alt: "Placeholder"}]
+  {src: "/images/brand-book/brand-book_colours-font.jpg", alt: "Brand font and colours"},
+  {src: "/images/brand-book/brand-book_images-illustrations.jpg", alt: "How to create illustrations and use images"}
+]
+date: "2019"
 description: "Developed an updated and in-depth brand book for CurrencyFair, to improve consistency across the brand as we began to scale and enter more countries."
 strapline: "Branding"
 tech: ["Illustrator", "InDesign", "Photoshop"]
-thumbnail: "/images/image-placeholder.jpg"
-title: "Created a comprehensive brand book for CurrencyFair"
+thumbnail: "/images/brand-book/brand-book_thumbnail.jpg"
+title: "Led the design of a comprehensive brand book for CurrencyFair"
 ---
 
 ### Refreshing the brand and improving consistency

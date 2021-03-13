@@ -2,15 +2,18 @@
 category: "Coding"
 carousel: true
 carouselImages: [
-  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_editable.jpg", alt: "Home page of the GitHub jobs listing"},
-  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_display.jpg", alt: "Page for the selected job"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_editable.jpg", alt: "Component editing interface on HubSpot"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_gated.jpg", alt: "Landing page designs for gated content"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_blogs.jpg", alt: "An example of a component that suggests more blogs"},
+  {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_campaigns.jpg", alt: "Campaign landing pages with forms, modals and embedded video"},
 ]
+date: "2020"
 description: "Responsible for designing and building HubSpot components to be used in landing pages for marketing campaigns,
              using HTML, CSS, JavaScript and HubL - HubSpots own templating language. Components were designed with reusability
              and customisability in mind, allowing the content creators freedom to use them throughout multiple pages."
 strapline: "HTML, CSS & JS"
 tech: ["HTML", "CSS", "JavaScript", "HubL"]
-thumbnail: "/images/github-jobs-api/github-jobs-api_thumbnail.jpg"
+thumbnail: "/images/hubspot-landing-pages-components/hubspot-lp-components_thumbnail.jpg"
 title: "Designed and built HubSpot landing pages and components"
 ---
 
@@ -182,7 +185,7 @@ popupClose.addEventListener("click", () => {
 --- 
 
 #### Title
-```HTML
+```html
 {% if module.module_styling.background_colour == 'background-charcoal' or module.module_styling.background_colour == 'background-gradient' %}
 {% set titleColour = "light" %}
 {% else %}

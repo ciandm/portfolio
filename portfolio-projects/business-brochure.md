@@ -6,6 +6,7 @@ carouselImages: [
   {src: "/images/business-brochure/business-brochure_mobile.jpg", alt: "Mobile versions of the CurrencyFair Business website"},
   {src: "/images/business-brochure/business-brochure_feature-pages.jpg", alt: "Feature pages on the new CurrencyFair Business website"},
 ]
+date: "2020"
 description: "I rebranded CurrencyFair Business, a necessary step in the evolution of CurrencyFair as a product as they began to move away from personal money transfers and towards a high volume payments platform for businesses. This included updating the look and feel of CurrencyFair Business as a brand, and implementing it across the brochure site and creatives."
 links: [
   {

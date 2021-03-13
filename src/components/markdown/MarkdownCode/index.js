@@ -56,6 +56,6 @@ const MarkdownCode = ({ language, value }) => {
 export default MarkdownCode;
 
 MarkdownCode.propTypes = {
-  language: PropTypes.oneOf(['javascript', 'HTML']).isRequired,
+  language: PropTypes.oneOf(['javascript', 'html']).isRequired,
   value: PropTypes.node.isRequired,
 };
