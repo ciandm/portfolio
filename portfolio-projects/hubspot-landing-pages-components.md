@@ -18,7 +18,7 @@ title: "Designed and built HubSpot landing pages and components"
 
 #### Using HubL to create reusable components
 
-```
+```html
 <section class="suggested-blogs suggested-blogs--{{module.module_styling.background_colour}} {{module.module_styling.borders}}">
   <div class="suggested-blogs__wrapper suggested-blogs__wrapper--{{module.theme}}">
     {% if module.has_section_title == 'yes' %}
@@ -56,7 +56,7 @@ title: "Designed and built HubSpot landing pages and components"
 
 Figuring out how to create this interactive component was a fun challenge. As the subscription was shared across multiple components - the subscription selection, step list and modal - I created a  provider with a useSubscription hook that allowed the components mentioned to access this data. As there was sometimes multiple actions happening every time a user selected an option, I used a reducer. This allowed me to solve the complex state management with easy to follow actions.
 
-```
+```javascript
 // Defining selectors
 const audio = document.getElementById("audio");
 const playPause = document.getElementById("playPause");

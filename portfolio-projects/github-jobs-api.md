@@ -27,14 +27,14 @@ title: "Website to display jobs using the GitHub Jobs API"
 
 ### Code snippets
 
-#### useFetchJobs custom hook
+#### useFetchJobs custom hook 
 To fetch the jobs from the GitHub Jobs API, I used **axios** to send the HTTP requests as this made it more 
 user friendly to add parameters to the query. These parameters were used when filtering by jobs, and also
 to return the result as markdown, which I could then style and print out using **React Markdown**. As there were
 CORS issues here, **I deployed a CORS Anywhere** server to Heroku (*based off of https://github.com/Rob--W/cors-anywhere*)
 to act as a proxy and negate the CORS problem.
 
-```
+~~~javascript
 import { useEffect, useReducer } from 'react'
 import axios from 'axios';
 
@@ -131,4 +131,4 @@ const useFetchJobs = (params, page) => {
 
   return state;
 }
-```
+~~~

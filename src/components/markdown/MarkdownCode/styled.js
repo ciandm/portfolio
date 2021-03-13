@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   border-radius: 1.2rem;
   display: flex;
+  font-family: 'Fira Code';
   flex-direction: column;
   max-height: ${({ open }) => (open ? '6000px' : '200px')};
   margin-top: 2.4rem;
@@ -30,5 +31,38 @@ export const Container = styled.div`
     transition: opacity 0.5s ease-in-out;
     top: 0;
     width: 100%;
+  }
+
+  & * {
+    font-family: inherit;
+  }
+`;
+
+export const MenuBar = styled.div`
+  background-color: hsl(213, 80%, 8%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 1.6rem;
+  z-index: 500;
+`;
+
+export const Dots = styled.div`
+  display: flex;
+`;
+
+export const Dot = styled.div`
+  background-color: ${({ color, theme }) =>
+    color === 'green'
+      ? theme.colors.tertiary.eucalyptus
+      : color === 'red'
+      ? theme.colors.tertiary.redViolet
+      : theme.colors.tertiary.tanHide};
+  border-radius: 1.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+
+  & + & {
+    margin-left: 0.8rem;
   }
 `;

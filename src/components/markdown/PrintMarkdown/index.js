@@ -3,6 +3,7 @@ import unified from 'unified';
 import parse from 'remark-parse';
 import remark2react from 'remark-react';
 import unwrapImages from 'remark-unwrap-images';
+import ReactMarkdown from 'react-markdown';
 import Heading from '../../shared/Typography/Heading';
 import * as S from './styled';
 import Paragraph from '../../shared/Typography/Paragraph';
@@ -10,47 +11,46 @@ import MarkdownImage from '../MarkdownImage';
 import MarkdownCode from '../MarkdownCode';
 
 function PrintMarkdown({ markdown }) {
+  console.log(markdown);
   // Defining which components should be used when printing out markdown
-  const MarkdownComponents = {
-    H3: ({ children }) => (
-      <Heading type="h3" color="blackPearl">
-        {children}
-      </Heading>
+  const renderers = {
+    code: ({ language, value }) => (
+      <MarkdownCode language={language} value={value} />
     ),
-    H4: ({ children }) => (
-      <Heading type="h4" color="blackPearl">
-        {children}
-      </Heading>
+    heading: ({ children, level }) => {
+      return (
+        <Heading type={`h${level}`} color="blackPearl">
+          {children}
+        </Heading>
+      );
+    },
+    image: props => <MarkdownImage {...props} />,
+    paragraph: ({ children }) => (
+      <Paragraph color="blueBayoux">{children}</Paragraph>
     ),
-    H5: ({ children }) => (
-      <Heading type="h5" color="blackPearl">
-        {children}
-      </Heading>
-    ),
-    Img: props => <MarkdownImage {...props} />,
-    P: ({ children }) => <Paragraph color="blueBayoux">{children}</Paragraph>,
-    Pre: props => <MarkdownCode {...props} />,
   };
 
-  const content = unified()
-    .use(unwrapImages)
-    .use(parse)
-    .use(remark2react, {
-      remarkReactComponents: {
-        h3: MarkdownComponents.H3,
-        h4: MarkdownComponents.H4,
-        h5: MarkdownComponents.H5,
-        img: MarkdownComponents.Img,
-        p: MarkdownComponents.P,
-        pre: MarkdownComponents.Pre,
-      },
-    })
-    .processSync(markdown).result;
+  // const content = unified()
+  //   .use(unwrapImages)
+  //   .use(parse)
+  //   .use(remark2react, {
+  //     remarkReactComponents: {
+  //       code: MarkdownComponents.Code,
+  //       h3: MarkdownComponents.H3,
+  //       h4: MarkdownComponents.H4,
+  //       h5: MarkdownComponents.H5,
+  //       img: MarkdownComponents.Img,
+  //       p: MarkdownComponents.P,
+  //     },
+  //   })
+  //   .processSync(markdown).result;
 
   return (
     <S.Section>
       <S.Wrapper>
-        <S.Markdown>{content}</S.Markdown>
+        <S.Markdown>
+          <ReactMarkdown renderers={renderers}>{markdown}</ReactMarkdown>
+        </S.Markdown>
       </S.Wrapper>
     </S.Section>
   );
