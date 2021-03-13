@@ -38,5 +38,5 @@ ButtonPrimary.propTypes = {
 };
 
 ButtonPrimary.defaultProps = {
-  as: 'link',
+  as: 'a',
 };

@@ -12,7 +12,7 @@ links: [
     linkText: "See it in action",
   }
 ]
-strapline: "Web Design"
+strapline: "UI Design"
 tech: ["Figma", "Usability Hub"]
 thumbnail: "/images/reg-page/reg-page_thumbnail.jpg"
 title: "Redesigned the CurrencyFair registration page"

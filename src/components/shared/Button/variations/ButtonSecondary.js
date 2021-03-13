@@ -15,7 +15,7 @@ const ButtonSecondary = ({
   if (as === 'a') {
     return (
       <Link href={href} passHref>
-        <S.ButtonSecondary {...restProps}>
+        <S.ButtonSecondary as={as} {...restProps}>
           {children} <MdArrowForward />
         </S.ButtonSecondary>
       </Link>
@@ -34,7 +34,7 @@ const ButtonSecondary = ({
 export default ButtonSecondary;
 
 ButtonSecondary.propTypes = {
-  as: PropTypes.oneOf(['button', 'link']).isRequired,
+  as: PropTypes.oneOf(['button', 'a']).isRequired,
   children: PropTypes.node.isRequired,
   handleButtonClick: PropTypes.func,
   href: PropTypes.string,
