@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useKeenSlider } from 'keen-slider/react';
+import { useRouter } from 'next/router';
 import Container from './Container';
 import CarouselImage from './CarouselImage';
 import * as S from './styled';
@@ -16,6 +17,14 @@ function Carousel({ carouselImages }) {
       setCurrentSlide(s.details().relativeSlide);
     },
   });
+  const router = useRouter();
+
+  // Refresh the slider after every route change
+  useEffect(() => {
+    if (slider) {
+      slider.refresh();
+    }
+  }, [router, slider]);
 
   return (
     <Container>
