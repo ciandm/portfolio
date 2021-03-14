@@ -8,7 +8,7 @@ carouselImages: [
 ]
 date: "2021"
 description: [
-  "I built a website for a fictional design agency called Designo using React and Styled Components, with a LeafletJS integration for displaying addressed on maps.",
+  "I built a website for a fictional design agency called Designo using React and Styled Components, with a LeafletJS integration for displaying addresses on maps.",
   "Please note - as this is a fictional website some links may not work properly."
 ]
 links: [

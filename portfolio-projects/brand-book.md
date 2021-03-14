@@ -15,7 +15,7 @@ title: "Led the design of a comprehensive brand book for CurrencyFair"
 
 ### Refreshing the brand and improving consistency
 
-Working in collaboration with the brand manager of CurrencyFair in 2019, I began work on **refreshing the look and feel of CurrencyFair**. The previous brand book was a couple of years old and did not reflect the recent work that was being completed, so an updated brand book was the obvious next step. This project was carried out to ensure the business had a **consistent and cohesive look** and feel as we entered new markets, with visibility for all employees of CurrencyFair. We were able to deliver an extensive document with over **40 pages** that could explain who CurrencyFair was, what it was doing, and how they did it. These included guidelines ranging from the use of our logo to imagery best practices and misuses as well as colours and typography.
+Working in collaboration with the brand manager of CurrencyFair in 2019, I began work on **refreshing the look and feel of CurrencyFair**. The previous brand book was a couple of years old and did not reflect the recent work that was being completed, so an updated brand book was the obvious next step. This project was carried out to ensure the business had a **consistent and cohesive look and feel** as we entered new markets, with visibility for all employees of CurrencyFair. We were able to deliver an extensive document with over **40 pages** that could explain who CurrencyFair was, what it was doing, and how they did it. These included guidelines ranging from the use of our logo to imagery best practices and misuses as well as colours and typography.
 
 ### Applying my take on the brand
 
