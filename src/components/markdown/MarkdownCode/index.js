@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { tomorrowNightBlue } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
 import Button from '../../shared/Button';
 import * as S from './styled';
@@ -14,7 +14,7 @@ const MarkdownCode = ({ language, value }) => {
     lineHeight: '1.5',
     overflowX: open ? 'auto' : 'hidden',
     overflowY: 'hidden',
-    padding: '3.6rem',
+    padding: '2.4rem',
   };
 
   const handleCodeToggle = () => {
@@ -34,15 +34,10 @@ const MarkdownCode = ({ language, value }) => {
       </Button>
       <S.Container open={open}>
         <S.MenuBar>
-          <S.Dots>
-            <S.Dot color="red" />
-            <S.Dot color="orange" />
-            <S.Dot color="green" />
-          </S.Dots>
           <S.Language>{language === 'javascript' ? 'JS' : language}</S.Language>
         </S.MenuBar>
         <SyntaxHighlighter
-          style={tomorrowNightBlue}
+          style={nightOwl}
           language={language}
           customStyle={customStyling}
         >

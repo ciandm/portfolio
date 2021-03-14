@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  border-radius: 1.2rem;
   display: flex;
   font-family: 'Fira Code';
   flex-direction: column;
@@ -41,15 +40,23 @@ export const Container = styled.div`
   & * {
     font-family: inherit;
   }
+
+  & > pre::-webkit-scrollbar {
+    background-color: ${({ theme }) => theme.colors.primary.blackPearl};
+  }
+
+  & > pre::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.primary.denim};
+  }
 `;
 
 export const MenuBar = styled.div`
   align-items: center;
-  background-color: hsl(213, 80%, 6%);
+  background-color: ${({ theme }) => theme.colors.primary.blackPearl};
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 1.6rem;
+  padding: 1.6rem 2.4rem;
   z-index: 500;
 `;
 
@@ -75,8 +82,6 @@ export const Dot = styled.div`
 
 export const Language = styled.span`
   ${SmallCaps};
-  background-color: ${({ theme }) => theme.colors.primary.blackPearl};
-  border-radius: 2rem;
   color: ${({ theme }) => theme.colors.primary.white};
-  padding: 0.4rem 1.2rem;
+  font-size: 1.6rem;
 `;

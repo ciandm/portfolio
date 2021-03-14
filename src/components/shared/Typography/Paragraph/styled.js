@@ -14,4 +14,10 @@ export const Paragraph = styled.p`
   & strong {
     font-weight: 700;
   }
+
+  & code {
+    background-color: ${({ theme }) => theme.colors.secondary.periwinkle};
+    border-radius: 4px;
+    padding: 0.8rem 0.4rem;
+  }
 `;

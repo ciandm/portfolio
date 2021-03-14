@@ -52,7 +52,7 @@ export const Markdown = styled.div`
 
   & hr {
     border-top: 1px solid ${({ theme }) => theme.colors.secondary.periwinkle};
-    margin: 3.6rem 0;
+    margin: 4.8rem 0;
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
