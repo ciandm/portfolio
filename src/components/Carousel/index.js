@@ -23,6 +23,7 @@ function Carousel({ carouselImages }) {
   useEffect(() => {
     if (slider) {
       slider.refresh();
+      slider.moveToSlide(0);
     }
   }, [router, slider]);
 
