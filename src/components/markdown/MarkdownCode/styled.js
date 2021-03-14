@@ -5,10 +5,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3.6rem;
-
-  & button {
-    margin-left: -0.8rem;
-  }
 `;
 
 export const Container = styled.div`

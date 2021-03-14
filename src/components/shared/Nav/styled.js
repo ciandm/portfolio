@@ -3,7 +3,7 @@ import { H4, SmallCaps } from '../../../theme/typography';
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary.white};
-  box-shadow: 0 4px 20px hsla(213, 80%, 12%, 0.12);
+  box-shadow: 0 4px 20px hsla(213, 80%, 12%, 0.06);
   padding: 1.2rem 1.6rem;
   position: relative;
   z-index: 500;
