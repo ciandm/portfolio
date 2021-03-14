@@ -10,7 +10,7 @@ carouselImages: [
 date: "2019"
 description: "Designed unique and branded illustrations for CurrencyFair to be used throughout the product."
 strapline: "Branding"
-tech: ["Illustrator"]
+tech: ["Adobe Illustrator"]
 thumbnail: "/images/illustrations/illustrations_thumbnail.jpg"
 title: "Created bespoke illustrations for CurrencyFair"
 ---
@@ -19,7 +19,7 @@ title: "Created bespoke illustrations for CurrencyFair"
 
 In order to help differentiate CurrencyFair and make them stand out, I proposed to the wider team a project to create tailor-made illustrations to help explain concepts and improve branding throughout the website and web app. My aim was to create an illustration style that was unique to CurrencyFair and helped to reflect the personality of the brand; modern and helpful. To do this, I began experimenting with different styles and settled on an outlined style with trimmed lines and using the brand gradient as the main colour. This helped to bring colour throughout the website and web app, and add personality to transactional screens.
 
-![Illustrations that were created for CurrencyFair, with some still a work in progress.](/images/illustrations/illustrations_grid.jpg)
+![Illustrations that were created for CurrencyFair, with some still a work in progress](/images/illustrations/illustrations_grid.jpg)
 
 ### Complex versus simple
 

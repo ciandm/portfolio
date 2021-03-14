@@ -16,6 +16,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
+  border: 1px solid ${({ theme }) => theme.colors.secondary.periwinkle};
   height: auto;
   object-fit: cover;
   width: 100%;
@@ -25,8 +26,8 @@ export const Caption = styled.figcaption`
   ${Body};
   color: ${({ theme }) => theme.colors.secondary.blueBayoux};
   font-size: 1.4rem;
-  font-weight: 500;
   padding: 1.2rem 0;
+  text-align: center;
   transition: opacity 0.25s ease-in-out;
   width: 100%;
   z-index: 1;
