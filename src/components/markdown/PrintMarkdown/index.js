@@ -5,6 +5,7 @@ import * as S from './styled';
 import Paragraph from '../../shared/Typography/Paragraph';
 import MarkdownImage from '../MarkdownImage';
 import MarkdownCode from '../MarkdownCode';
+import MarkdownLink from '../MarkdownLink';
 
 function PrintMarkdown({ markdown }) {
   // Defining which components should be used when printing out markdown
@@ -18,6 +19,9 @@ function PrintMarkdown({ markdown }) {
           {children}
         </Heading>
       );
+    },
+    link: ({ node }) => {
+      return <MarkdownLink {...node} />;
     },
     paragraph: ({ children }) => {
       if (

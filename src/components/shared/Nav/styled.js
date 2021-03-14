@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { H3, SmallCaps } from '../../../theme/typography';
+import { H4, SmallCaps } from '../../../theme/typography';
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary.white};
+  box-shadow: 0 4px 20px hsla(213, 80%, 12%, 0.12);
   padding: 1.2rem 1.6rem;
   position: relative;
   z-index: 500;
@@ -42,28 +43,28 @@ export const NavItems = styled.ul`
   top: 100%;
   width: 100%;
 
-  &::before {
-    background-color: ${({ theme }) => theme.colors.primary.blackPearl};
-    content: '';
-    display: block;
-    height: 100vh;
-    left: 0;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-
-    @media ${({ theme }) => theme.mediaQueries.tablet} {
-      display: none;
-    }
-  }
-
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     flex-direction: row;
     padding: 0;
     position: initial;
     width: auto;
+  }
+`;
+
+export const NavBackdrop = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary.blackPearl};
+  content: '';
+  display: block;
+  height: 100vh;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    display: none;
   }
 `;
 
@@ -85,9 +86,10 @@ export const NavIcon = styled.div`
 `;
 
 export const NavItem = styled.li`
-  ${H3};
+  ${H4};
   align-items: center;
   display: flex;
+  font-weight: 700;
   width: 100%;
 
   & a {

@@ -20,4 +20,12 @@ export const Paragraph = styled.p`
     border-radius: 4px;
     padding: 0.8rem 0.4rem;
   }
+
+  & a {
+    color: ${({ theme }) => theme.colors.primary.denim};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.blackPearl};
+    }
+  }
 `;

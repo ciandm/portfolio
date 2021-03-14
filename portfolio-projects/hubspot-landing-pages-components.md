@@ -8,9 +8,7 @@ carouselImages: [
   {src: "/images/hubspot-landing-pages-components/hubspot-lp-components_campaigns.jpg", alt: "Campaign landing pages with forms, modals and embedded video"},
 ]
 date: "2020"
-description: "Responsible for designing and building HubSpot components to be used in landing pages for marketing campaigns,
-             using HTML, CSS, JavaScript and HubL - HubSpots own templating language. Components were designed with reusability
-             and customisability in mind, allowing the content creators freedom to use them throughout multiple pages."
+description: "Responsible for designing and building HubSpot components to be used in landing pages for CurrencyFair's marketing    campaigns, using HTML, CSS, JavaScript and HubL - HubSpots own templating language. Components were designed with reusability and customisability in mind, allowing the content creators freedom to use them throughout multiple pages."
 strapline: "HTML, CSS & JS"
 tech: ["HTML", "CSS", "JavaScript", "HubL"]
 thumbnail: "/images/hubspot-landing-pages-components/hubspot-lp-components_thumbnail.jpg"
@@ -59,7 +57,7 @@ HubL is HubSpot's extension of Jinjava, a templating engine based on Jinja. It i
 
 ![The custom audio player built for a podcast landing page, with a waveform created using Wavesurfer.js](/images/hubspot-landing-pages-components/hubspot-lp-components_podcast.jpg)
 
-Figuring out how to create this interactive component was a fun challenge. As the subscription was shared across multiple components - the subscription selection, step list and modal - I created a  provider with a useSubscription hook that allowed the components mentioned to access this data. As there was sometimes multiple actions happening every time a user selected an option, I used a reducer. This allowed me to solve the complex state management with easy to follow actions.
+I was tasked with **building a podcast hosting page**, which was used as bonus content for people who signed up and viewed the The CurrencyFair Business Webinar - Business Culture in Asia. To achieve this through HubSpot, I had to **use vanilla JavaScript to create a custom-built audio player**. Using wavesurfer.js, I was able to **integrate a waveform** for each audio clip to mirror some of the video ads that I created too which contained snippets of the speakers and a moving waveform. During the development, I encountered an issue with Safari which only rendered about ten percent of the waveform and audio when wavesurfer.js was used. To circumvent this issue, I created a separate component to pre-render the audio peaks and then placed this on the HTML element in the DOM, under the attribute `data-peaks`. This meant there was also less load time on the audio itself, as the peaks had already been determined. I also had to generate a pop up, to let the user know that they needed to turn on the volume switch on their mobile phone as audio could not be played otherwise.
 
 ```javascript
 // Defining selectors
@@ -186,7 +184,10 @@ popupClose.addEventListener("click", () => {
 
 --- 
 
-#### Title
+#### Fully customisable and reusable components
+
+In order to ensure the best experience for content creators when building landing pages, I had to **build modules with flexability in mind**. This approach let the end user who was building the pages use a specific module across multiple pages, each with a possibly different design or content each time. For example, they could choose not to have text below a title on a hero section or change the theme of the module from business branding to personal branding. This **wide range of customisability on each module** meant multiple pages were able to be designed very quickly, whilst still remaining branded and have a similar look and feel. Using the powerful drag and drop page builder from HubSpot, modules could be easily moved around pages and styling from section borders, background colours to padding meant they could **fit anywhere on the page and slot in seamlessly with the other surrounding modules**.
+
 ```html
 {% if module.module_styling.background_colour == 'background-charcoal' or module.module_styling.background_colour == 'background-gradient' %}
 {% set titleColour = "light" %}

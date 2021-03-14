@@ -7,6 +7,7 @@ import Button from '../../shared/Button';
 import * as S from './styled';
 
 const MarkdownCode = ({ language, value }) => {
+  // Implementing state to expand code on click, to reduce page height
   const [open, setOpen] = useState(false);
   const customStyling = {
     backgroundColor: 'hsl(213, 80%, 12%)',

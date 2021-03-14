@@ -16,14 +16,14 @@ links: [
   }
 ]
 strapline: "Web Design"
-tech: ["Figma"]
+tech: ["Figma", "Adobe After Effects"]
 thumbnail: "/images/personal-brochure/personal-brochure_thumbnail.jpg"
 title: "Redesigned CurrencyFair personal brochure site"
 ---
 
 ### Revamping the brochure site, with scalability in mind
 
-As CurrencyFair began to enter new markets, the old brochure site began to appear dated and required revitalisation so it could translate across to more international markets. As the business began to migrate away from WordPress towards Gatsby and React, there was no better time to implement improved designs. I was also able to implement a **refreshed feel of the CurrencyFair personal brand**, which helped to differentiate it more from the branding for CurrencyFair Business (which I also did, link [here](/portfolio/business-brochure)). As a result, there is now a much **clearer distinction between the personal and business** products that CurrencyFair has to offer. After countless Figma comments and feedback sessions, I was able to design a completely revamped brochure site for CurrencyFair with a large emphasis on **showing the product using animations and app screenshots**. This included the delivery of over 10 brand new pages, each with well thought out flows to maximise exposure to the product before customers have even registered.
+As CurrencyFair began to enter new markets, the old brochure site began to appear dated and required revitalisation so it could translate across to more international markets. As the business began to migrate away from WordPress towards Gatsby and React, there was no better time to implement improved designs. I was also able to implement a **refreshed feel of the CurrencyFair personal brand**, which helped to differentiate it more from the branding I implemented for CurrencyFair Business (which you can see [here](/portfolio/business-brochure)). As a result, there was a much **clearer distinction between the personal and business** products that CurrencyFair offers. After countless Figma comments and feedback sessions, I was able to design a completely revamped brochure site for CurrencyFair with a large emphasis on **showing the product using animations and app screenshots**. This included the delivery of over 10 brand new pages, each with well thought out flows to maximise exposure to the product before customers have even registered.
 
 ### Getting the most out of a small team
 

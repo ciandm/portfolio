@@ -30,6 +30,10 @@ function Nav() {
     setOpen(false);
   }, [router]);
 
+  const handleMenuClose = () => {
+    setOpen(false);
+  };
+
   return (
     <S.Nav>
       <S.NavWrapper>
@@ -40,7 +44,11 @@ function Nav() {
           </S.Menu>
         ) : null}
         {/* If it's open and on mobile, or it's not mobile, which will only be true when brower width is > 768 */}
-        <S.NavItems open={(open && isMobile) || !isMobile}>
+        <S.NavItems
+          open={(open && isMobile) || !isMobile}
+          onClick={e => handleMenuClose(e)}
+        >
+          {isMobile && open ? <S.NavBackdrop /> : null}
           <S.NavItem active={router.pathname === '/'}>
             {isMobile ? (
               <S.NavIcon>

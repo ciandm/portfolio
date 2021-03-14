@@ -25,11 +25,11 @@ With something as important as a registration page, **I had to be sure what I wa
 
 ![A selection of versions that were created to be tested using Usability Hub, with the final design shown on the bottom right](/images/reg-page/reg-page_versions.jpg)
 
-One of the main goals for this project was to make this difference much clearer, and to do this I had to test multiple variations of designs on Usability Hub. The question here to the testers was simple - **“Imagine you’re a business owner intending to open an account with CurrencyFair - where would you click next?”**. Over multiple tests with random users selected from around the world, I was able to refine my design for the registration page until I achieved a **100% click rate** on the toggle for creating a business account, something that fell short on the original design with around 60% success rate. With these excellent results, I had the confidence to move forward with the chosen design and fully deliver a new and improved registration page.
+One of the main goals for this project was to make this difference much clearer, and to do this I had to test multiple variations of designs on Usability Hub. The question here to the testers was simple - _“Imagine you’re a business owner intending to open an account with CurrencyFair - where would you click next?”_. Over multiple tests with random users selected from around the world, I was able to refine my design for the registration page until I achieved a **100% click rate** on the toggle for creating a business account, something that fell short on the original design with around 60% success rate. With these excellent results, I had the confidence to move forward with the chosen design and fully deliver a new and improved registration page.
 
-![Heatmap of clicks on the old registration flow](/images/reg-page/reg-page_old-flow.jpg)
+![Old design of the CurrencyFair registration page with heatmaps for answers to the question "Imagine you’re a business owner intending to open an account with CurrencyFair - where would you click next?"](/images/reg-page/reg-page_old-flow.jpg)
 
-![Heatmap of clicks on the new registration flow](/images/reg-page/reg-page_new-flow.jpg)
+![Heatmap of clicks on the new registration design, with the same question posed](/images/reg-page/reg-page_new-flow.jpg)
 
 ### Highlighting the different accounts
 
