@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import kwesforms from 'kwesforms';
 import * as S from './styled';
 // Components
 import Intro from './Intro';
@@ -7,6 +8,9 @@ import Button from '../shared/Button';
 import FormSubmission from './FormSubmission';
 
 function Form({ submitted, handleFormSubmission }) {
+  useEffect(() => {
+    kwesforms.init();
+  }, []);
   // to be sent when submitted
   const [inputs, setInputs] = useState({
     accessKey: '456bd9b2-f931-44f2-9ba9-2d5d4ae2798f',
@@ -100,15 +104,11 @@ function Form({ submitted, handleFormSubmission }) {
             <FormSubmission />
           ) : (
             <S.Form
-              action="https://api.staticforms.xyz/submit"
+              className="kwes-form"
+              action="https://kwes.io/api/foreign/forms/5aJO9YrDP2NhzSK4lS4z"
               method="POST"
               onSubmit={e => handleSubmit(e)}
             >
-              <input
-                type="hidden"
-                name="accessKey"
-                value="456bd9b2-f931-44f2-9ba9-2d5d4ae2798f"
-              />
               <Input
                 error={errors.name}
                 handleInputChange={handleInputChange}
