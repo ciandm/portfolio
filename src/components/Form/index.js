@@ -9,7 +9,7 @@ import FormSubmission from './FormSubmission';
 function Form({ submitted, handleFormSubmission }) {
   // to be sent when submitted
   const [inputs, setInputs] = useState({
-    accessKey: process.env.STATIC_FORMS_ACCESS_KEY,
+    accessKey: process.env.NEXT_PUBLIC_STATIC_FORMS_ACCESS_KEY,
     email: '',
     message: '',
     name: '',
