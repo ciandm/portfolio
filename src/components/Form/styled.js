@@ -16,7 +16,7 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    min-height: calc(100vh - 183px);
+    min-height: calc(100vh - 151px);
     padding: 8.4rem 0;
   }
 `;
