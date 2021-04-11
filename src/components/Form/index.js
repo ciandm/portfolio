@@ -11,6 +11,7 @@ function Form({ submitted, handleFormSubmission }) {
   const [inputs, setInputs] = useState({
     accessKey: '456bd9b2-f931-44f2-9ba9-2d5d4ae2798f',
     email: '',
+    honeypot: '',
     message: '',
     name: '',
     subject: 'Form submission',
@@ -108,6 +109,12 @@ function Form({ submitted, handleFormSubmission }) {
                 type="hidden"
                 name="accessKey"
                 value="456bd9b2-f931-44f2-9ba9-2d5d4ae2798f"
+              />
+              <input
+                type="text"
+                name="honeypot"
+                style={{ display: 'none' }}
+                onChange={e => handleInputChange(e)}
               />
               <Input
                 error={errors.name}
