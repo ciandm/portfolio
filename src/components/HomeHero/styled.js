@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
+    align-items: center;
     display: flex;
     justify-content: center;
     padding: 0;

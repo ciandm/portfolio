@@ -8,6 +8,10 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="IcZripUzDXho7MJPBqpU1Io3FLgddIDA1sPRo0UyPxE"
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"

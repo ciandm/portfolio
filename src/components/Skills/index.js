@@ -66,9 +66,6 @@ function Skills() {
           <Button variation="primary" as="a" href="/portfolio">
             See some of my work
           </Button>
-          <Button variation="secondary" as="a" href="/contact">
-            Get in touch
-          </Button>
         </S.Buttons>
       </S.Wrapper>
     </Section>

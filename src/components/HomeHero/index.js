@@ -23,15 +23,11 @@ function HomeHero() {
             interest in web design and development.
           </Paragraph>
           <Paragraph color="blueBayoux">
-            I currently work as a Digital Designer for CurrencyFair, an online
-            global money exchange company.
+            I currently work as a Frontend UX/UI Engineer at Grant Thornton.
           </Paragraph>
           <S.Buttons>
             <Button variation="primary" as="a" href="/portfolio">
               View my portfolio
-            </Button>
-            <Button variation="secondary" as="a" href="/contact">
-              Get in touch
             </Button>
           </S.Buttons>
         </S.Content>

@@ -15,11 +15,16 @@ function GetInTouchBanner({ backgroundColor }) {
             Want to have a chat?
           </Heading>
           <Paragraph color="white">
-            Leave me a message and I’ll promise to get back to you as soon as
-            possible - even if it’s just to say hello!
+            Leave me a message on LinkedIn - that's the best place to contact
+            me! I'll try get back to you as soon as possible.
           </Paragraph>
           <S.Buttons>
-            <Button variation="primary" as="a" href="/contact">
+            <Button
+              variation="primary"
+              as="a"
+              target="_blank"
+              href="https://www.linkedin.com/in/cian-dolphin-murray-92b05712a/"
+            >
               Get in touch
             </Button>
           </S.Buttons>
